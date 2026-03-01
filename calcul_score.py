@@ -33,8 +33,8 @@ ps = 0
 pu = 0.2
 pu_vrai = (1-ps)*pu
 
-qw = 32
-qa = 32
+qw = 16
+qa = 16
 
 summ = torchinfo.summary(model, (1, 3, 32, 32))
 w = summ.total_params

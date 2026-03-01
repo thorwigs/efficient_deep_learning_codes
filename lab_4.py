@@ -129,3 +129,7 @@ test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
 
 path = "stats/DN_pruning_0_2"
 torch.save(model.state_dict(), path+".pth")
+
+print("Test network after half:")
+model.half()
+test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss(), half=True))

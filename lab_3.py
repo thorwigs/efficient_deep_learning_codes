@@ -18,12 +18,20 @@ test_dataloader = test.load_cifar_test(test.load_test_transformation())
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-"""
-loaded_cpt = torch.load('stats/DN_100_scheduler_1.pth')
+loaded_cpt = torch.load('stats/DN_300_scheduler_mixup_1.pth')
 
-model = densenet_cifar()
+config2 = {"epochs": 300,
+          'lr': 0.1,
+          "momentum": 0.9,
+          "weight_decay": 5e-4, 
+          "nb_blocks": [4,8,16,12],
+          "gr": 8,
+          "red": 0.5}
+
+model = densenet_cifar_plus_petit(**config2)
 model.load_state_dict(loaded_cpt)
 model.eval()
+model.to(device)
 
 print("Test whole network on cifar test :")
 test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
@@ -267,3 +275,4 @@ with wandb.init(project=project, config=config) as run:
 model_bc.binarization()
 print("Test binarized model :")
 test.read(*test.test(model_bc.model, test_dataloader, device, nn.CrossEntropyLoss()))
+"""
