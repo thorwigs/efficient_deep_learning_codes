@@ -1,0 +1,29 @@
+2026-02-16 14:48:58,092 INFO    MainThread:3329303 [wandb_setup.py:_flush():68] Current SDK version is 0.19.1
+2026-02-16 14:48:58,092 INFO    MainThread:3329303 [wandb_setup.py:_flush():68] Configure stats pid to 3329303
+2026-02-16 14:48:58,093 INFO    MainThread:3329303 [wandb_setup.py:_flush():68] Loading settings from /homes/y23charo/.config/wandb/settings
+2026-02-16 14:48:58,099 INFO    MainThread:3329303 [wandb_setup.py:_flush():68] Loading settings from /homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/wandb/settings
+2026-02-16 14:48:58,106 INFO    MainThread:3329303 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2026-02-16 14:48:58,113 INFO    MainThread:3329303 [wandb_init.py:_log_setup():528] Logging user logs to /homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/wandb/run-20260216_144857-hcp2nnua/logs/debug.log
+2026-02-16 14:48:58,120 INFO    MainThread:3329303 [wandb_init.py:_log_setup():529] Logging internal logs to /homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/wandb/run-20260216_144857-hcp2nnua/logs/debug-internal.log
+2026-02-16 14:48:58,126 INFO    MainThread:3329303 [wandb_init.py:init():644] calling init triggers
+2026-02-16 14:48:58,133 INFO    MainThread:3329303 [wandb_init.py:init():650] wandb.init called with sweep_config: {}
+config: {'epochs': 1, 'lr': 0.005, 'momentum': 0.9, 'weight_decay': 0.0005}
+2026-02-16 14:48:58,140 INFO    MainThread:3329303 [wandb_init.py:init():680] starting backend
+2026-02-16 14:48:58,147 INFO    MainThread:3329303 [wandb_init.py:init():684] sending inform_init request
+2026-02-16 14:48:58,159 INFO    MainThread:3329303 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2026-02-16 14:48:58,160 INFO    MainThread:3329303 [wandb_init.py:init():697] backend started and connected
+2026-02-16 14:48:58,170 INFO    MainThread:3329303 [wandb_init.py:init():790] updated telemetry
+2026-02-16 14:48:58,176 INFO    MainThread:3329303 [wandb_init.py:init():822] communicating run to backend with 90.0 second timeout
+2026-02-16 14:48:58,787 INFO    MainThread:3329303 [wandb_init.py:init():874] starting run threads in backend
+2026-02-16 14:49:00,111 INFO    MainThread:3329303 [wandb_run.py:_console_start():2374] atexit reg
+2026-02-16 14:49:00,111 INFO    MainThread:3329303 [wandb_run.py:_redirect():2224] redirect: wrap_raw
+2026-02-16 14:49:00,111 INFO    MainThread:3329303 [wandb_run.py:_redirect():2289] Wrapping output streams.
+2026-02-16 14:49:00,118 INFO    MainThread:3329303 [wandb_run.py:_redirect():2314] Redirects installed.
+2026-02-16 14:49:00,126 INFO    MainThread:3329303 [wandb_init.py:init():916] run started, returning control to user process
+2026-02-16 14:52:23,255 INFO    MainThread:3329303 [wandb_run.py:_finish():2100] finishing run yannig-charonnat-imta-imt-atlantique/training efficient deep learning/hcp2nnua
+2026-02-16 14:52:23,262 INFO    MainThread:3329303 [wandb_run.py:_atexit_cleanup():2339] got exitcode: 0
+2026-02-16 14:52:23,263 INFO    MainThread:3329303 [wandb_run.py:_restore():2321] restore
+2026-02-16 14:52:23,263 INFO    MainThread:3329303 [wandb_run.py:_restore():2327] restore done
+2026-02-16 14:52:25,661 INFO    MainThread:3329303 [wandb_run.py:_footer_history_summary_info():3892] rendering history
+2026-02-16 14:52:25,662 INFO    MainThread:3329303 [wandb_run.py:_footer_history_summary_info():3924] rendering summary
+2026-02-16 14:52:25,738 INFO    MainThread:3329303 [wandb_run.py:_footer_sync_info():3853] logging synced files

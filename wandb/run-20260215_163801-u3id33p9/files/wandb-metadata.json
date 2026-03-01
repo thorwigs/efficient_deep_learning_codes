@@ -1,0 +1,36 @@
+{
+  "os":  "Linux-6.8.0-94-generic-x86_64-with-glibc2.39",
+  "python":  "CPython 3.12.3",
+  "startedAt":  "2026-02-15T15:38:01.909237Z",
+  "program":  "/users/local/train.py",
+  "email":  "yannig.charonnat2@imt-atlantique.net",
+  "root":  "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1",
+  "host":  "sl-tp-br-511",
+  "executable":  "/opt/img/effdl-venv/bin/python3",
+  "cpu_count":  4,
+  "cpu_count_logical":  4,
+  "gpu":  "NVIDIA GeForce GTX 1060 6GB",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "105089261568",
+      "used":  "72840216576"
+    }
+  },
+  "memory":  {
+    "total":  "8288694272"
+  },
+  "cpu":  {
+    "count":  4,
+    "countLogical":  4
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce GTX 1060 6GB",
+      "memoryTotal":  "6442450944",
+      "cudaCores":  1280,
+      "architecture":  "Pascal"
+    }
+  ],
+  "cudaVersion":  "13.0"
+}

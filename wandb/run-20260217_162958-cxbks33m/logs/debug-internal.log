@@ -1,0 +1,17 @@
+{"time":"2026-02-17T16:29:59.1757392+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2026-02-17T16:29:59.175810277+01:00","level":"INFO","msg":"created symlink","path":"/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/wandb/run-20260217_162958-cxbks33m/logs/debug-core.log"}
+{"time":"2026-02-17T16:29:59.320485393+01:00","level":"INFO","msg":"created new stream","id":"cxbks33m"}
+{"time":"2026-02-17T16:29:59.320641729+01:00","level":"INFO","msg":"stream: started","id":"cxbks33m"}
+{"time":"2026-02-17T16:29:59.320772447+01:00","level":"INFO","msg":"sender: started","stream_id":"cxbks33m"}
+{"time":"2026-02-17T16:29:59.320758064+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"cxbks33m"}
+{"time":"2026-02-17T16:29:59.320920358+01:00","level":"INFO","msg":"handler: started","stream_id":"cxbks33m"}
+{"time":"2026-02-17T16:29:59.814757046+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-02-17T16:30:01.23822554+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-02-17T16:30:01.238670169+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-02-17T16:30:02.239118849+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.151802512,"progress":"24B/24B"}],"total_operations":1}}
+{"time":"2026-02-17T16:30:03.108501784+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-17T16:30:04.859613527+01:00","level":"INFO","msg":"stream: closing","id":"cxbks33m"}
+{"time":"2026-02-17T16:30:04.859645154+01:00","level":"INFO","msg":"handler: closed","stream_id":"cxbks33m"}
+{"time":"2026-02-17T16:30:04.859654499+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"cxbks33m"}
+{"time":"2026-02-17T16:30:04.859705392+01:00","level":"INFO","msg":"sender: closed","stream_id":"cxbks33m"}
+{"time":"2026-02-17T16:30:04.884093973+01:00","level":"INFO","msg":"stream: closed","id":"cxbks33m"}

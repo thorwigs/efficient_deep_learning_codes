@@ -1,0 +1,32 @@
+Begining training on device : cuda:0
+Begining epoch 1:
+[1,   156] loss: 2.365
+[1,   312] loss: 1.941
+[1,   468] loss: 1.799
+[1,   624] loss: 1.708
+[1,   780] loss: 1.627
+[1,   936] loss: 1.576
+[1,  1092] loss: 1.495
+[1,  1248] loss: 1.418
+[1,  1404] loss: 1.360
+[1,  1560] loss: 1.297
+End of epoch 1 :
+	mean loss = 1.658
+	test loss = 11.900
+	test accuracy = 55.65%
+Begining training on device : cuda:0
+Begining epoch 2:
+[2,   156] loss: 1.823
+[2,   312] loss: 1.817
+[2,   468] loss: 1.820
+[2,   624] loss: 1.742
+[2,   780] loss: 1.746
+[2,   936] loss: 1.735
+[2,  1092] loss: 1.725
+[2,  1248] loss: 1.700
+[2,  1404] loss: 1.751
+[2,  1560] loss: 1.647
+End of epoch 2 :
+	mean loss = 1.750
+	test loss = 11.198
+	test accuracy = 64.52%

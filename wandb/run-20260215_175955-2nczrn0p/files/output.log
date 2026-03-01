@@ -1,0 +1,1126 @@
+Begining training on device : cuda:0
+Begining epoch 1:
+[1,   156] loss: 2.506
+[1,   312] loss: 1.987
+[1,   468] loss: 1.824
+[1,   624] loss: 1.740
+[1,   780] loss: 1.673
+[1,   936] loss: 1.585
+[1,  1092] loss: 1.522
+[1,  1248] loss: 1.448
+[1,  1404] loss: 1.361
+[1,  1560] loss: 1.316
+End of epoch 1 :
+	mean loss = 1.696
+	test loss = 12.984
+	test accuracy = 53.12%
+Begining epoch 2:
+[2,   156] loss: 1.266
+[2,   312] loss: 1.223
+[2,   468] loss: 1.161
+[2,   624] loss: 1.123
+[2,   780] loss: 1.110
+[2,   936] loss: 1.072
+[2,  1092] loss: 1.068
+[2,  1248] loss: 1.009
+[2,  1404] loss: 0.988
+[2,  1560] loss: 0.956
+End of epoch 2 :
+	mean loss = 1.097
+	test loss = 9.119
+	test accuracy = 68.30%
+Begining epoch 3:
+[3,   156] loss: 0.937
+[3,   312] loss: 0.919
+[3,   468] loss: 0.862
+[3,   624] loss: 0.874
+[3,   780] loss: 0.861
+[3,   936] loss: 0.824
+[3,  1092] loss: 0.829
+[3,  1248] loss: 0.798
+[3,  1404] loss: 0.801
+[3,  1560] loss: 0.805
+End of epoch 3 :
+	mean loss = 0.851
+	test loss = 7.669
+	test accuracy = 73.38%
+Begining epoch 4:
+[4,   156] loss: 0.785
+[4,   312] loss: 0.723
+[4,   468] loss: 0.733
+[4,   624] loss: 0.745
+[4,   780] loss: 0.717
+[4,   936] loss: 0.729
+[4,  1092] loss: 0.739
+[4,  1248] loss: 0.700
+[4,  1404] loss: 0.689
+[4,  1560] loss: 0.684
+End of epoch 4 :
+	mean loss = 0.724
+	test loss = 7.005
+	test accuracy = 75.71%
+Begining epoch 5:
+[5,   156] loss: 0.644
+[5,   312] loss: 0.626
+[5,   468] loss: 0.625
+[5,   624] loss: 0.651
+[5,   780] loss: 0.643
+[5,   936] loss: 0.614
+[5,  1092] loss: 0.622
+[5,  1248] loss: 0.623
+[5,  1404] loss: 0.635
+[5,  1560] loss: 0.610
+End of epoch 5 :
+	mean loss = 0.629
+	test loss = 6.168
+	test accuracy = 79.02%
+Begining epoch 6:
+[6,   156] loss: 0.580
+[6,   312] loss: 0.586
+[6,   468] loss: 0.592
+[6,   624] loss: 0.597
+[6,   780] loss: 0.567
+[6,   936] loss: 0.572
+[6,  1092] loss: 0.553
+[6,  1248] loss: 0.587
+[6,  1404] loss: 0.546
+[6,  1560] loss: 0.557
+End of epoch 6 :
+	mean loss = 0.574
+	test loss = 5.738
+	test accuracy = 80.69%
+Begining epoch 7:
+[7,   156] loss: 0.503
+[7,   312] loss: 0.538
+[7,   468] loss: 0.538
+[7,   624] loss: 0.527
+[7,   780] loss: 0.535
+[7,   936] loss: 0.536
+[7,  1092] loss: 0.529
+[7,  1248] loss: 0.515
+[7,  1404] loss: 0.518
+[7,  1560] loss: 0.531
+End of epoch 7 :
+	mean loss = 0.527
+	test loss = 5.132
+	test accuracy = 82.44%
+Begining epoch 8:
+[8,   156] loss: 0.501
+[8,   312] loss: 0.489
+[8,   468] loss: 0.491
+[8,   624] loss: 0.499
+[8,   780] loss: 0.487
+[8,   936] loss: 0.467
+[8,  1092] loss: 0.506
+[8,  1248] loss: 0.472
+[8,  1404] loss: 0.464
+[8,  1560] loss: 0.472
+End of epoch 8 :
+	mean loss = 0.485
+	test loss = 5.282
+	test accuracy = 82.13%
+Begining epoch 9:
+[9,   156] loss: 0.444
+[9,   312] loss: 0.464
+[9,   468] loss: 0.468
+[9,   624] loss: 0.459
+[9,   780] loss: 0.437
+[9,   936] loss: 0.433
+[9,  1092] loss: 0.473
+[9,  1248] loss: 0.441
+[9,  1404] loss: 0.449
+[9,  1560] loss: 0.450
+End of epoch 9 :
+	mean loss = 0.452
+	test loss = 4.861
+	test accuracy = 83.23%
+Begining epoch 10:
+[10,   156] loss: 0.427
+[10,   312] loss: 0.426
+[10,   468] loss: 0.435
+[10,   624] loss: 0.429
+[10,   780] loss: 0.433
+[10,   936] loss: 0.429
+[10,  1092] loss: 0.419
+[10,  1248] loss: 0.428
+[10,  1404] loss: 0.427
+[10,  1560] loss: 0.432
+End of epoch 10 :
+	mean loss = 0.429
+	test loss = 4.694
+	test accuracy = 83.74%
+Begining epoch 11:
+[11,   156] loss: 0.379
+[11,   312] loss: 0.421
+[11,   468] loss: 0.399
+[11,   624] loss: 0.400
+[11,   780] loss: 0.405
+[11,   936] loss: 0.429
+[11,  1092] loss: 0.374
+[11,  1248] loss: 0.402
+[11,  1404] loss: 0.421
+[11,  1560] loss: 0.411
+End of epoch 11 :
+	mean loss = 0.404
+	test loss = 4.462
+	test accuracy = 84.73%
+Begining epoch 12:
+[12,   156] loss: 0.365
+[12,   312] loss: 0.377
+[12,   468] loss: 0.371
+[12,   624] loss: 0.354
+[12,   780] loss: 0.386
+[12,   936] loss: 0.394
+[12,  1092] loss: 0.355
+[12,  1248] loss: 0.384
+[12,  1404] loss: 0.381
+[12,  1560] loss: 0.379
+End of epoch 12 :
+	mean loss = 0.374
+	test loss = 4.328
+	test accuracy = 85.60%
+Begining epoch 13:
+[13,   156] loss: 0.330
+[13,   312] loss: 0.338
+[13,   468] loss: 0.345
+[13,   624] loss: 0.347
+[13,   780] loss: 0.366
+[13,   936] loss: 0.358
+[13,  1092] loss: 0.352
+[13,  1248] loss: 0.357
+[13,  1404] loss: 0.381
+[13,  1560] loss: 0.375
+End of epoch 13 :
+	mean loss = 0.355
+	test loss = 4.388
+	test accuracy = 84.74%
+Begining epoch 14:
+[14,   156] loss: 0.320
+[14,   312] loss: 0.363
+[14,   468] loss: 0.324
+[14,   624] loss: 0.341
+[14,   780] loss: 0.327
+[14,   936] loss: 0.366
+[14,  1092] loss: 0.351
+[14,  1248] loss: 0.359
+[14,  1404] loss: 0.356
+[14,  1560] loss: 0.338
+End of epoch 14 :
+	mean loss = 0.345
+	test loss = 4.261
+	test accuracy = 85.62%
+Begining epoch 15:
+[15,   156] loss: 0.312
+[15,   312] loss: 0.316
+[15,   468] loss: 0.331
+[15,   624] loss: 0.337
+[15,   780] loss: 0.347
+[15,   936] loss: 0.329
+[15,  1092] loss: 0.337
+[15,  1248] loss: 0.325
+[15,  1404] loss: 0.331
+[15,  1560] loss: 0.329
+End of epoch 15 :
+	mean loss = 0.329
+	test loss = 4.098
+	test accuracy = 86.33%
+Begining epoch 16:
+[16,   156] loss: 0.309
+[16,   312] loss: 0.309
+[16,   468] loss: 0.311
+[16,   624] loss: 0.293
+[16,   780] loss: 0.316
+[16,   936] loss: 0.306
+[16,  1092] loss: 0.297
+[16,  1248] loss: 0.322
+[16,  1404] loss: 0.338
+[16,  1560] loss: 0.320
+End of epoch 16 :
+	mean loss = 0.312
+	test loss = 4.229
+	test accuracy = 86.04%
+Begining epoch 17:
+[17,   156] loss: 0.289
+[17,   312] loss: 0.311
+[17,   468] loss: 0.289
+[17,   624] loss: 0.289
+[17,   780] loss: 0.314
+[17,   936] loss: 0.286
+[17,  1092] loss: 0.311
+[17,  1248] loss: 0.298
+[17,  1404] loss: 0.297
+[17,  1560] loss: 0.311
+End of epoch 17 :
+	mean loss = 0.300
+	test loss = 4.118
+	test accuracy = 86.09%
+Begining epoch 18:
+[18,   156] loss: 0.270
+[18,   312] loss: 0.295
+[18,   468] loss: 0.293
+[18,   624] loss: 0.282
+[18,   780] loss: 0.300
+[18,   936] loss: 0.282
+[18,  1092] loss: 0.291
+[18,  1248] loss: 0.302
+[18,  1404] loss: 0.305
+[18,  1560] loss: 0.293
+End of epoch 18 :
+	mean loss = 0.292
+	test loss = 3.759
+	test accuracy = 86.99%
+Begining epoch 19:
+[19,   156] loss: 0.256
+[19,   312] loss: 0.245
+[19,   468] loss: 0.279
+[19,   624] loss: 0.290
+[19,   780] loss: 0.282
+[19,   936] loss: 0.277
+[19,  1092] loss: 0.285
+[19,  1248] loss: 0.290
+[19,  1404] loss: 0.286
+[19,  1560] loss: 0.306
+End of epoch 19 :
+	mean loss = 0.280
+	test loss = 4.376
+	test accuracy = 85.54%
+Begining epoch 20:
+[20,   156] loss: 0.239
+[20,   312] loss: 0.272
+[20,   468] loss: 0.246
+[20,   624] loss: 0.261
+[20,   780] loss: 0.279
+[20,   936] loss: 0.265
+[20,  1092] loss: 0.264
+[20,  1248] loss: 0.255
+[20,  1404] loss: 0.280
+[20,  1560] loss: 0.300
+End of epoch 20 :
+	mean loss = 0.266
+	test loss = 3.675
+	test accuracy = 87.60%
+Begining epoch 21:
+[21,   156] loss: 0.243
+[21,   312] loss: 0.269
+[21,   468] loss: 0.262
+[21,   624] loss: 0.254
+[21,   780] loss: 0.248
+[21,   936] loss: 0.259
+[21,  1092] loss: 0.267
+[21,  1248] loss: 0.280
+[21,  1404] loss: 0.254
+[21,  1560] loss: 0.271
+End of epoch 21 :
+	mean loss = 0.260
+	test loss = 3.989
+	test accuracy = 86.92%
+Begining epoch 22:
+[22,   156] loss: 0.224
+[22,   312] loss: 0.243
+[22,   468] loss: 0.256
+[22,   624] loss: 0.246
+[22,   780] loss: 0.264
+[22,   936] loss: 0.245
+[22,  1092] loss: 0.258
+[22,  1248] loss: 0.266
+[22,  1404] loss: 0.252
+[22,  1560] loss: 0.257
+End of epoch 22 :
+	mean loss = 0.251
+	test loss = 3.687
+	test accuracy = 87.72%
+Begining epoch 23:
+[23,   156] loss: 0.218
+[23,   312] loss: 0.257
+[23,   468] loss: 0.237
+[23,   624] loss: 0.252
+[23,   780] loss: 0.247
+[23,   936] loss: 0.243
+[23,  1092] loss: 0.242
+[23,  1248] loss: 0.250
+[23,  1404] loss: 0.263
+[23,  1560] loss: 0.263
+End of epoch 23 :
+	mean loss = 0.247
+	test loss = 3.570
+	test accuracy = 88.19%
+Begining epoch 24:
+[24,   156] loss: 0.200
+[24,   312] loss: 0.219
+[24,   468] loss: 0.237
+[24,   624] loss: 0.233
+[24,   780] loss: 0.231
+[24,   936] loss: 0.262
+[24,  1092] loss: 0.261
+[24,  1248] loss: 0.226
+[24,  1404] loss: 0.236
+[24,  1560] loss: 0.217
+End of epoch 24 :
+	mean loss = 0.232
+	test loss = 3.925
+	test accuracy = 86.88%
+Begining epoch 25:
+[25,   156] loss: 0.209
+[25,   312] loss: 0.230
+[25,   468] loss: 0.225
+[25,   624] loss: 0.248
+[25,   780] loss: 0.216
+[25,   936] loss: 0.232
+[25,  1092] loss: 0.244
+[25,  1248] loss: 0.252
+[25,  1404] loss: 0.240
+[25,  1560] loss: 0.225
+End of epoch 25 :
+	mean loss = 0.232
+	test loss = 4.215
+	test accuracy = 85.95%
+Begining epoch 26:
+[26,   156] loss: 0.198
+[26,   312] loss: 0.217
+[26,   468] loss: 0.201
+[26,   624] loss: 0.224
+[26,   780] loss: 0.209
+[26,   936] loss: 0.229
+[26,  1092] loss: 0.232
+[26,  1248] loss: 0.242
+[26,  1404] loss: 0.225
+[26,  1560] loss: 0.241
+End of epoch 26 :
+	mean loss = 0.222
+	test loss = 3.820
+	test accuracy = 87.37%
+Begining epoch 27:
+[27,   156] loss: 0.207
+[27,   312] loss: 0.209
+[27,   468] loss: 0.230
+[27,   624] loss: 0.220
+[27,   780] loss: 0.229
+[27,   936] loss: 0.208
+[27,  1092] loss: 0.231
+[27,  1248] loss: 0.232
+[27,  1404] loss: 0.216
+[27,  1560] loss: 0.233
+End of epoch 27 :
+	mean loss = 0.222
+	test loss = 3.798
+	test accuracy = 87.54%
+Begining epoch 28:
+[28,   156] loss: 0.194
+[28,   312] loss: 0.188
+[28,   468] loss: 0.221
+[28,   624] loss: 0.207
+[28,   780] loss: 0.234
+[28,   936] loss: 0.218
+[28,  1092] loss: 0.224
+[28,  1248] loss: 0.219
+[28,  1404] loss: 0.241
+[28,  1560] loss: 0.217
+End of epoch 28 :
+	mean loss = 0.216
+	test loss = 4.198
+	test accuracy = 86.63%
+Begining epoch 29:
+[29,   156] loss: 0.198
+[29,   312] loss: 0.200
+[29,   468] loss: 0.195
+[29,   624] loss: 0.228
+[29,   780] loss: 0.222
+[29,   936] loss: 0.241
+[29,  1092] loss: 0.205
+[29,  1248] loss: 0.221
+[29,  1404] loss: 0.209
+[29,  1560] loss: 0.227
+End of epoch 29 :
+	mean loss = 0.215
+	test loss = 3.553
+	test accuracy = 88.03%
+Begining epoch 30:
+[30,   156] loss: 0.206
+[30,   312] loss: 0.198
+[30,   468] loss: 0.180
+[30,   624] loss: 0.220
+[30,   780] loss: 0.210
+[30,   936] loss: 0.207
+[30,  1092] loss: 0.212
+[30,  1248] loss: 0.217
+[30,  1404] loss: 0.219
+[30,  1560] loss: 0.219
+End of epoch 30 :
+	mean loss = 0.209
+	test loss = 3.702
+	test accuracy = 88.27%
+Begining epoch 31:
+[31,   156] loss: 0.163
+[31,   312] loss: 0.204
+[31,   468] loss: 0.229
+[31,   624] loss: 0.198
+[31,   780] loss: 0.215
+[31,   936] loss: 0.185
+[31,  1092] loss: 0.217
+[31,  1248] loss: 0.229
+[31,  1404] loss: 0.201
+[31,  1560] loss: 0.223
+End of epoch 31 :
+	mean loss = 0.206
+	test loss = 3.890
+	test accuracy = 87.20%
+Begining epoch 32:
+[32,   156] loss: 0.182
+[32,   312] loss: 0.188
+[32,   468] loss: 0.201
+[32,   624] loss: 0.197
+[32,   780] loss: 0.208
+[32,   936] loss: 0.189
+[32,  1092] loss: 0.204
+[32,  1248] loss: 0.206
+[32,  1404] loss: 0.222
+[32,  1560] loss: 0.195
+End of epoch 32 :
+	mean loss = 0.199
+	test loss = 3.969
+	test accuracy = 87.58%
+Begining epoch 33:
+[33,   156] loss: 0.188
+[33,   312] loss: 0.180
+[33,   468] loss: 0.183
+[33,   624] loss: 0.196
+[33,   780] loss: 0.209
+[33,   936] loss: 0.211
+[33,  1092] loss: 0.201
+[33,  1248] loss: 0.194
+[33,  1404] loss: 0.217
+[33,  1560] loss: 0.204
+End of epoch 33 :
+	mean loss = 0.199
+	test loss = 3.651
+	test accuracy = 87.98%
+Begining epoch 34:
+[34,   156] loss: 0.203
+[34,   312] loss: 0.177
+[34,   468] loss: 0.199
+[34,   624] loss: 0.200
+[34,   780] loss: 0.202
+[34,   936] loss: 0.197
+[34,  1092] loss: 0.214
+[34,  1248] loss: 0.195
+[34,  1404] loss: 0.207
+[34,  1560] loss: 0.202
+End of epoch 34 :
+	mean loss = 0.199
+	test loss = 3.812
+	test accuracy = 87.41%
+Begining epoch 35:
+[35,   156] loss: 0.164
+[35,   312] loss: 0.184
+[35,   468] loss: 0.183
+[35,   624] loss: 0.195
+[35,   780] loss: 0.188
+[35,   936] loss: 0.197
+[35,  1092] loss: 0.206
+[35,  1248] loss: 0.216
+[35,  1404] loss: 0.199
+[35,  1560] loss: 0.227
+End of epoch 35 :
+	mean loss = 0.196
+	test loss = 3.776
+	test accuracy = 87.58%
+Begining epoch 36:
+[36,   156] loss: 0.173
+[36,   312] loss: 0.168
+[36,   468] loss: 0.199
+[36,   624] loss: 0.191
+[36,   780] loss: 0.199
+[36,   936] loss: 0.180
+[36,  1092] loss: 0.212
+[36,  1248] loss: 0.197
+[36,  1404] loss: 0.187
+[36,  1560] loss: 0.209
+End of epoch 36 :
+	mean loss = 0.192
+	test loss = 3.948
+	test accuracy = 86.93%
+Begining epoch 37:
+[37,   156] loss: 0.166
+[37,   312] loss: 0.191
+[37,   468] loss: 0.183
+[37,   624] loss: 0.186
+[37,   780] loss: 0.202
+[37,   936] loss: 0.194
+[37,  1092] loss: 0.198
+[37,  1248] loss: 0.197
+[37,  1404] loss: 0.201
+[37,  1560] loss: 0.213
+End of epoch 37 :
+	mean loss = 0.193
+	test loss = 3.720
+	test accuracy = 87.81%
+Begining epoch 38:
+[38,   156] loss: 0.165
+[38,   312] loss: 0.196
+[38,   468] loss: 0.177
+[38,   624] loss: 0.185
+[38,   780] loss: 0.182
+[38,   936] loss: 0.184
+[38,  1092] loss: 0.194
+[38,  1248] loss: 0.191
+[38,  1404] loss: 0.186
+[38,  1560] loss: 0.209
+End of epoch 38 :
+	mean loss = 0.187
+	test loss = 3.703
+	test accuracy = 88.17%
+Begining epoch 39:
+[39,   156] loss: 0.159
+[39,   312] loss: 0.184
+[39,   468] loss: 0.181
+[39,   624] loss: 0.181
+[39,   780] loss: 0.170
+[39,   936] loss: 0.180
+[39,  1092] loss: 0.181
+[39,  1248] loss: 0.200
+[39,  1404] loss: 0.184
+[39,  1560] loss: 0.199
+End of epoch 39 :
+	mean loss = 0.182
+	test loss = 3.540
+	test accuracy = 88.60%
+Begining epoch 40:
+[40,   156] loss: 0.157
+[40,   312] loss: 0.168
+[40,   468] loss: 0.177
+[40,   624] loss: 0.182
+[40,   780] loss: 0.169
+[40,   936] loss: 0.178
+[40,  1092] loss: 0.177
+[40,  1248] loss: 0.207
+[40,  1404] loss: 0.197
+[40,  1560] loss: 0.190
+End of epoch 40 :
+	mean loss = 0.180
+	test loss = 3.610
+	test accuracy = 88.29%
+Begining epoch 41:
+[41,   156] loss: 0.158
+[41,   312] loss: 0.161
+[41,   468] loss: 0.169
+[41,   624] loss: 0.173
+[41,   780] loss: 0.174
+[41,   936] loss: 0.185
+[41,  1092] loss: 0.188
+[41,  1248] loss: 0.166
+[41,  1404] loss: 0.201
+[41,  1560] loss: 0.187
+End of epoch 41 :
+	mean loss = 0.176
+	test loss = 3.789
+	test accuracy = 88.35%
+Begining epoch 42:
+[42,   156] loss: 0.171
+[42,   312] loss: 0.161
+[42,   468] loss: 0.164
+[42,   624] loss: 0.192
+[42,   780] loss: 0.168
+[42,   936] loss: 0.184
+[42,  1092] loss: 0.173
+[42,  1248] loss: 0.183
+[42,  1404] loss: 0.202
+[42,  1560] loss: 0.210
+End of epoch 42 :
+	mean loss = 0.181
+	test loss = 3.901
+	test accuracy = 87.56%
+Begining epoch 43:
+[43,   156] loss: 0.170
+[43,   312] loss: 0.170
+[43,   468] loss: 0.163
+[43,   624] loss: 0.177
+[43,   780] loss: 0.170
+[43,   936] loss: 0.195
+[43,  1092] loss: 0.187
+[43,  1248] loss: 0.186
+[43,  1404] loss: 0.187
+[43,  1560] loss: 0.196
+End of epoch 43 :
+	mean loss = 0.181
+	test loss = 3.694
+	test accuracy = 88.41%
+Begining epoch 44:
+[44,   156] loss: 0.151
+[44,   312] loss: 0.179
+[44,   468] loss: 0.157
+[44,   624] loss: 0.168
+[44,   780] loss: 0.170
+[44,   936] loss: 0.171
+[44,  1092] loss: 0.186
+[44,  1248] loss: 0.195
+[44,  1404] loss: 0.179
+[44,  1560] loss: 0.197
+End of epoch 44 :
+	mean loss = 0.175
+	test loss = 3.819
+	test accuracy = 87.65%
+Begining epoch 45:
+[45,   156] loss: 0.154
+[45,   312] loss: 0.171
+[45,   468] loss: 0.164
+[45,   624] loss: 0.162
+[45,   780] loss: 0.187
+[45,   936] loss: 0.192
+[45,  1092] loss: 0.175
+[45,  1248] loss: 0.169
+[45,  1404] loss: 0.191
+[45,  1560] loss: 0.199
+End of epoch 45 :
+	mean loss = 0.177
+	test loss = 3.562
+	test accuracy = 88.53%
+Begining epoch 46:
+[46,   156] loss: 0.171
+[46,   312] loss: 0.157
+[46,   468] loss: 0.149
+[46,   624] loss: 0.160
+[46,   780] loss: 0.178
+[46,   936] loss: 0.168
+[46,  1092] loss: 0.170
+[46,  1248] loss: 0.180
+[46,  1404] loss: 0.190
+[46,  1560] loss: 0.172
+End of epoch 46 :
+	mean loss = 0.170
+	test loss = 3.801
+	test accuracy = 88.14%
+Begining epoch 47:
+[47,   156] loss: 0.181
+[47,   312] loss: 0.168
+[47,   468] loss: 0.166
+[47,   624] loss: 0.160
+[47,   780] loss: 0.169
+[47,   936] loss: 0.175
+[47,  1092] loss: 0.173
+[47,  1248] loss: 0.169
+[47,  1404] loss: 0.194
+[47,  1560] loss: 0.178
+End of epoch 47 :
+	mean loss = 0.173
+	test loss = 3.577
+	test accuracy = 88.62%
+Begining epoch 48:
+[48,   156] loss: 0.156
+[48,   312] loss: 0.154
+[48,   468] loss: 0.169
+[48,   624] loss: 0.173
+[48,   780] loss: 0.179
+[48,   936] loss: 0.176
+[48,  1092] loss: 0.176
+[48,  1248] loss: 0.177
+[48,  1404] loss: 0.171
+[48,  1560] loss: 0.181
+End of epoch 48 :
+	mean loss = 0.171
+	test loss = 3.732
+	test accuracy = 88.16%
+Begining epoch 49:
+[49,   156] loss: 0.159
+[49,   312] loss: 0.146
+[49,   468] loss: 0.177
+[49,   624] loss: 0.185
+[49,   780] loss: 0.174
+[49,   936] loss: 0.169
+[49,  1092] loss: 0.182
+[49,  1248] loss: 0.173
+[49,  1404] loss: 0.172
+[49,  1560] loss: 0.187
+End of epoch 49 :
+	mean loss = 0.172
+	test loss = 3.593
+	test accuracy = 88.56%
+Begining epoch 50:
+[50,   156] loss: 0.139
+[50,   312] loss: 0.148
+[50,   468] loss: 0.176
+[50,   624] loss: 0.172
+[50,   780] loss: 0.179
+[50,   936] loss: 0.159
+[50,  1092] loss: 0.167
+[50,  1248] loss: 0.175
+[50,  1404] loss: 0.164
+[50,  1560] loss: 0.177
+End of epoch 50 :
+	mean loss = 0.165
+	test loss = 3.882
+	test accuracy = 87.89%
+Begining epoch 51:
+[51,   156] loss: 0.146
+[51,   312] loss: 0.157
+[51,   468] loss: 0.164
+[51,   624] loss: 0.161
+[51,   780] loss: 0.155
+[51,   936] loss: 0.160
+[51,  1092] loss: 0.179
+[51,  1248] loss: 0.179
+[51,  1404] loss: 0.176
+[51,  1560] loss: 0.171
+End of epoch 51 :
+	mean loss = 0.165
+	test loss = 3.642
+	test accuracy = 88.49%
+Begining epoch 52:
+[52,   156] loss: 0.146
+[52,   312] loss: 0.160
+[52,   468] loss: 0.171
+[52,   624] loss: 0.166
+[52,   780] loss: 0.172
+[52,   936] loss: 0.183
+[52,  1092] loss: 0.152
+[52,  1248] loss: 0.155
+[52,  1404] loss: 0.184
+[52,  1560] loss: 0.188
+End of epoch 52 :
+	mean loss = 0.168
+	test loss = 3.550
+	test accuracy = 88.94%
+Begining epoch 53:
+[53,   156] loss: 0.133
+[53,   312] loss: 0.176
+[53,   468] loss: 0.165
+[53,   624] loss: 0.159
+[53,   780] loss: 0.153
+[53,   936] loss: 0.183
+[53,  1092] loss: 0.157
+[53,  1248] loss: 0.175
+[53,  1404] loss: 0.169
+[53,  1560] loss: 0.173
+End of epoch 53 :
+	mean loss = 0.164
+	test loss = 3.946
+	test accuracy = 87.47%
+Begining epoch 54:
+[54,   156] loss: 0.152
+[54,   312] loss: 0.148
+[54,   468] loss: 0.148
+[54,   624] loss: 0.166
+[54,   780] loss: 0.164
+[54,   936] loss: 0.160
+[54,  1092] loss: 0.169
+[54,  1248] loss: 0.184
+[54,  1404] loss: 0.165
+[54,  1560] loss: 0.163
+End of epoch 54 :
+	mean loss = 0.162
+	test loss = 3.567
+	test accuracy = 88.92%
+Begining epoch 55:
+[55,   156] loss: 0.142
+[55,   312] loss: 0.147
+[55,   468] loss: 0.144
+[55,   624] loss: 0.169
+[55,   780] loss: 0.174
+[55,   936] loss: 0.165
+[55,  1092] loss: 0.160
+[55,  1248] loss: 0.170
+[55,  1404] loss: 0.183
+[55,  1560] loss: 0.155
+End of epoch 55 :
+	mean loss = 0.161
+	test loss = 3.652
+	test accuracy = 88.90%
+Begining epoch 56:
+[56,   156] loss: 0.160
+[56,   312] loss: 0.156
+[56,   468] loss: 0.149
+[56,   624] loss: 0.158
+[56,   780] loss: 0.158
+[56,   936] loss: 0.162
+[56,  1092] loss: 0.166
+[56,  1248] loss: 0.166
+[56,  1404] loss: 0.174
+[56,  1560] loss: 0.157
+End of epoch 56 :
+	mean loss = 0.161
+	test loss = 3.750
+	test accuracy = 88.78%
+Begining epoch 57:
+[57,   156] loss: 0.146
+[57,   312] loss: 0.142
+[57,   468] loss: 0.151
+[57,   624] loss: 0.178
+[57,   780] loss: 0.164
+[57,   936] loss: 0.154
+[57,  1092] loss: 0.172
+[57,  1248] loss: 0.162
+[57,  1404] loss: 0.152
+[57,  1560] loss: 0.164
+End of epoch 57 :
+	mean loss = 0.158
+	test loss = 3.709
+	test accuracy = 88.58%
+Begining epoch 58:
+[58,   156] loss: 0.143
+[58,   312] loss: 0.160
+[58,   468] loss: 0.150
+[58,   624] loss: 0.166
+[58,   780] loss: 0.154
+[58,   936] loss: 0.169
+[58,  1092] loss: 0.168
+[58,  1248] loss: 0.170
+[58,  1404] loss: 0.163
+[58,  1560] loss: 0.180
+End of epoch 58 :
+	mean loss = 0.162
+	test loss = 3.469
+	test accuracy = 88.87%
+Begining epoch 59:
+[59,   156] loss: 0.129
+[59,   312] loss: 0.146
+[59,   468] loss: 0.152
+[59,   624] loss: 0.164
+[59,   780] loss: 0.180
+[59,   936] loss: 0.167
+[59,  1092] loss: 0.165
+[59,  1248] loss: 0.176
+[59,  1404] loss: 0.171
+[59,  1560] loss: 0.166
+End of epoch 59 :
+	mean loss = 0.162
+	test loss = 3.774
+	test accuracy = 88.30%
+Begining epoch 60:
+[60,   156] loss: 0.133
+[60,   312] loss: 0.150
+[60,   468] loss: 0.159
+[60,   624] loss: 0.166
+[60,   780] loss: 0.170
+[60,   936] loss: 0.167
+[60,  1092] loss: 0.163
+[60,  1248] loss: 0.154
+[60,  1404] loss: 0.154
+[60,  1560] loss: 0.169
+End of epoch 60 :
+	mean loss = 0.158
+	test loss = 3.875
+	test accuracy = 88.41%
+Begining epoch 61:
+[61,   156] loss: 0.154
+[61,   312] loss: 0.153
+[61,   468] loss: 0.150
+[61,   624] loss: 0.156
+[61,   780] loss: 0.156
+[61,   936] loss: 0.151
+[61,  1092] loss: 0.147
+[61,  1248] loss: 0.153
+[61,  1404] loss: 0.162
+[61,  1560] loss: 0.177
+End of epoch 61 :
+	mean loss = 0.156
+	test loss = 3.469
+	test accuracy = 89.39%
+Begining epoch 62:
+[62,   156] loss: 0.150
+[62,   312] loss: 0.149
+[62,   468] loss: 0.144
+[62,   624] loss: 0.140
+[62,   780] loss: 0.168
+[62,   936] loss: 0.171
+[62,  1092] loss: 0.166
+[62,  1248] loss: 0.156
+[62,  1404] loss: 0.161
+[62,  1560] loss: 0.155
+End of epoch 62 :
+	mean loss = 0.156
+	test loss = 3.596
+	test accuracy = 88.63%
+Begining epoch 63:
+[63,   156] loss: 0.159
+[63,   312] loss: 0.140
+[63,   468] loss: 0.160
+[63,   624] loss: 0.150
+[63,   780] loss: 0.158
+[63,   936] loss: 0.153
+[63,  1092] loss: 0.155
+[63,  1248] loss: 0.150
+[63,  1404] loss: 0.149
+[63,  1560] loss: 0.166
+End of epoch 63 :
+	mean loss = 0.154
+	test loss = 3.940
+	test accuracy = 87.84%
+Begining epoch 64:
+[64,   156] loss: 0.143
+[64,   312] loss: 0.140
+[64,   468] loss: 0.140
+[64,   624] loss: 0.138
+[64,   780] loss: 0.160
+[64,   936] loss: 0.174
+[64,  1092] loss: 0.152
+[64,  1248] loss: 0.158
+[64,  1404] loss: 0.169
+[64,  1560] loss: 0.158
+End of epoch 64 :
+	mean loss = 0.153
+	test loss = 3.811
+	test accuracy = 88.21%
+Begining epoch 65:
+[65,   156] loss: 0.154
+[65,   312] loss: 0.142
+[65,   468] loss: 0.145
+[65,   624] loss: 0.163
+[65,   780] loss: 0.146
+[65,   936] loss: 0.151
+[65,  1092] loss: 0.167
+[65,  1248] loss: 0.153
+[65,  1404] loss: 0.162
+[65,  1560] loss: 0.164
+End of epoch 65 :
+	mean loss = 0.155
+	test loss = 3.775
+	test accuracy = 88.37%
+Begining epoch 66:
+[66,   156] loss: 0.140
+[66,   312] loss: 0.144
+[66,   468] loss: 0.158
+[66,   624] loss: 0.153
+[66,   780] loss: 0.143
+[66,   936] loss: 0.150
+[66,  1092] loss: 0.151
+[66,  1248] loss: 0.149
+[66,  1404] loss: 0.177
+[66,  1560] loss: 0.156
+End of epoch 66 :
+	mean loss = 0.152
+	test loss = 3.325
+	test accuracy = 89.27%
+Begining epoch 67:
+[67,   156] loss: 0.152
+[67,   312] loss: 0.145
+[67,   468] loss: 0.147
+[67,   624] loss: 0.145
+[67,   780] loss: 0.147
+[67,   936] loss: 0.144
+[67,  1092] loss: 0.157
+[67,  1248] loss: 0.166
+[67,  1404] loss: 0.160
+[67,  1560] loss: 0.164
+End of epoch 67 :
+	mean loss = 0.153
+	test loss = 3.635
+	test accuracy = 88.52%
+Begining epoch 68:
+[68,   156] loss: 0.130
+[68,   312] loss: 0.154
+[68,   468] loss: 0.129
+[68,   624] loss: 0.140
+[68,   780] loss: 0.125
+[68,   936] loss: 0.146
+[68,  1092] loss: 0.162
+[68,  1248] loss: 0.170
+[68,  1404] loss: 0.153
+[68,  1560] loss: 0.154
+End of epoch 68 :
+	mean loss = 0.147
+	test loss = 3.777
+	test accuracy = 88.41%
+Begining epoch 69:
+[69,   156] loss: 0.123
+[69,   312] loss: 0.126
+[69,   468] loss: 0.154
+[69,   624] loss: 0.158
+[69,   780] loss: 0.145
+[69,   936] loss: 0.163
+[69,  1092] loss: 0.131
+[69,  1248] loss: 0.152
+[69,  1404] loss: 0.162
+[69,  1560] loss: 0.178
+End of epoch 69 :
+	mean loss = 0.149
+	test loss = 3.339
+	test accuracy = 89.74%
+Begining epoch 70:
+[70,   156] loss: 0.122
+[70,   312] loss: 0.136
+[70,   468] loss: 0.149
+[70,   624] loss: 0.153
+[70,   780] loss: 0.162
+[70,   936] loss: 0.153
+[70,  1092] loss: 0.147
+[70,  1248] loss: 0.168
+[70,  1404] loss: 0.136
+[70,  1560] loss: 0.151
+End of epoch 70 :
+	mean loss = 0.148
+	test loss = 3.907
+	test accuracy = 88.12%
+Begining epoch 71:
+[71,   156] loss: 0.156
+[71,   312] loss: 0.133
+[71,   468] loss: 0.137
+[71,   624] loss: 0.153
+[71,   780] loss: 0.139
+[71,   936] loss: 0.159
+[71,  1092] loss: 0.153
+[71,  1248] loss: 0.154
+[71,  1404] loss: 0.134
+[71,  1560] loss: 0.146
+End of epoch 71 :
+	mean loss = 0.146
+	test loss = 3.877
+	test accuracy = 88.20%
+Begining epoch 72:
+[72,   156] loss: 0.123
+[72,   312] loss: 0.142
+[72,   468] loss: 0.162
+[72,   624] loss: 0.139
+[72,   780] loss: 0.146
+[72,   936] loss: 0.144
+[72,  1092] loss: 0.159
+[72,  1248] loss: 0.162
+[72,  1404] loss: 0.149
+[72,  1560] loss: 0.167
+End of epoch 72 :
+	mean loss = 0.149
+	test loss = 3.587
+	test accuracy = 88.94%
+Begining epoch 73:
+[73,   156] loss: 0.122
+[73,   312] loss: 0.133
+[73,   468] loss: 0.133
+[73,   624] loss: 0.148
+[73,   780] loss: 0.163
+[73,   936] loss: 0.149
+[73,  1092] loss: 0.156
+[73,  1248] loss: 0.163
+[73,  1404] loss: 0.180
+[73,  1560] loss: 0.132
+End of epoch 73 :
+	mean loss = 0.148
+	test loss = 3.726
+	test accuracy = 88.83%
+Begining epoch 74:
+[74,   156] loss: 0.124
+[74,   312] loss: 0.145
+[74,   468] loss: 0.154
+[74,   624] loss: 0.132
+[74,   780] loss: 0.148
+[74,   936] loss: 0.154
+[74,  1092] loss: 0.165
+[74,  1248] loss: 0.162
+[74,  1404] loss: 0.166
+[74,  1560] loss: 0.166
+End of epoch 74 :
+	mean loss = 0.152
+	test loss = 3.504
+	test accuracy = 89.01%
+Begining epoch 75:
+[75,   156] loss: 0.130
+[75,   312] loss: 0.158
+[75,   468] loss: 0.143
+[75,   624] loss: 0.142
+[75,   780] loss: 0.156
+[75,   936] loss: 0.154
+[75,  1092] loss: 0.166
+[75,  1248] loss: 0.145
+[75,  1404] loss: 0.155
+[75,  1560] loss: 0.148
+End of epoch 75 :
+	mean loss = 0.149
+	test loss = 3.882
+	test accuracy = 88.51%

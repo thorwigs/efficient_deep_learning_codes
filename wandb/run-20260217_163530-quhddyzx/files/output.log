@@ -1,0 +1,37 @@
+Begining training on device : cuda:0
+Begining epoch 1:
+[1,   156] loss: 12.266
+[1,   312] loss: 2.468
+[1,   468] loss: 2.131
+[1,   624] loss: 2.010
+[1,   780] loss: 1.975
+End of epoch 1 :
+	mean loss = 4.164
+	test loss = 22.906
+	test accuracy = 12.18%
+Begining epoch 2:
+[2,   156] loss: 1.923
+[2,   312] loss: 1.898
+[2,   468] loss: 1.885
+Traceback (most recent call last):
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/lab_3.py", line 257, in <module>
+    stats = train(model_bc, trainloader, test_dataloader, path, run, **config)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/lab_3.py", line 218, in train
+    net.clip()
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/lab_3.py", line 114, in clip
+    wclipped = hardtanh(w)
+               ^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/activation.py", line 269, in forward
+    return F.hardtanh(input, self.min_val, self.max_val, self.inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/functional.py", line 1766, in hardtanh
+    result = torch._C._nn.hardtanh(input, min_val, max_val)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

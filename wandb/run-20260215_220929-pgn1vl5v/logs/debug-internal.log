@@ -1,0 +1,17 @@
+{"time":"2026-02-15T22:09:29.646216884+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2026-02-15T22:09:29.646288253+01:00","level":"INFO","msg":"created symlink","path":"/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/wandb/run-20260215_220929-pgn1vl5v/logs/debug-core.log"}
+{"time":"2026-02-15T22:09:29.770017725+01:00","level":"INFO","msg":"created new stream","id":"pgn1vl5v"}
+{"time":"2026-02-15T22:09:29.770174092+01:00","level":"INFO","msg":"stream: started","id":"pgn1vl5v"}
+{"time":"2026-02-15T22:09:29.770270982+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"pgn1vl5v"}
+{"time":"2026-02-15T22:09:29.770336187+01:00","level":"INFO","msg":"sender: started","stream_id":"pgn1vl5v"}
+{"time":"2026-02-15T22:09:29.770624013+01:00","level":"INFO","msg":"handler: started","stream_id":"pgn1vl5v"}
+{"time":"2026-02-15T22:09:30.204831636+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-02-15T23:31:35.460897351+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-02-15T23:31:35.467290222+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-02-15T23:31:36.434115946+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.302042503,"progress":"18.4KB/18.4KB"}],"total_operations":1}}
+{"time":"2026-02-15T23:31:36.460905986+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-15T23:31:37.852672944+01:00","level":"INFO","msg":"stream: closing","id":"pgn1vl5v"}
+{"time":"2026-02-15T23:31:37.852743579+01:00","level":"INFO","msg":"handler: closed","stream_id":"pgn1vl5v"}
+{"time":"2026-02-15T23:31:37.852773723+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"pgn1vl5v"}
+{"time":"2026-02-15T23:31:37.852844963+01:00","level":"INFO","msg":"sender: closed","stream_id":"pgn1vl5v"}
+{"time":"2026-02-15T23:31:37.868694828+01:00","level":"INFO","msg":"stream: closed","id":"pgn1vl5v"}

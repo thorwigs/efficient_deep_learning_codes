@@ -1,0 +1,17 @@
+{"time":"2026-02-14T14:08:25.504988509+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2026-02-14T14:08:25.505052526+01:00","level":"INFO","msg":"created symlink","path":"/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/wandb/run-20260214_140825-fhbuqyic/logs/debug-core.log"}
+{"time":"2026-02-14T14:08:25.631655953+01:00","level":"INFO","msg":"created new stream","id":"fhbuqyic"}
+{"time":"2026-02-14T14:08:25.631767273+01:00","level":"INFO","msg":"stream: started","id":"fhbuqyic"}
+{"time":"2026-02-14T14:08:25.631907758+01:00","level":"INFO","msg":"sender: started","stream_id":"fhbuqyic"}
+{"time":"2026-02-14T14:08:25.631980714+01:00","level":"INFO","msg":"handler: started","stream_id":"fhbuqyic"}
+{"time":"2026-02-14T14:08:25.631865629+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"fhbuqyic"}
+{"time":"2026-02-14T14:08:26.104524679+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-02-14T15:27:40.961888489+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-02-14T15:27:40.969376271+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-02-14T15:27:41.924117031+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.325599412,"progress":"16.5KB/16.5KB"}],"total_operations":1}}
+{"time":"2026-02-14T15:27:41.959247355+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-14T15:27:43.358633543+01:00","level":"INFO","msg":"stream: closing","id":"fhbuqyic"}
+{"time":"2026-02-14T15:27:43.358661179+01:00","level":"INFO","msg":"handler: closed","stream_id":"fhbuqyic"}
+{"time":"2026-02-14T15:27:43.35867262+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"fhbuqyic"}
+{"time":"2026-02-14T15:27:43.358719686+01:00","level":"INFO","msg":"sender: closed","stream_id":"fhbuqyic"}
+{"time":"2026-02-14T15:27:43.378967449+01:00","level":"INFO","msg":"stream: closed","id":"fhbuqyic"}

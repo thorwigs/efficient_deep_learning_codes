@@ -1,0 +1,17 @@
+{"time":"2026-02-16T14:48:58.202293545+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2026-02-16T14:48:58.202363827+01:00","level":"INFO","msg":"created symlink","path":"/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/wandb/run-20260216_144857-hcp2nnua/logs/debug-core.log"}
+{"time":"2026-02-16T14:48:58.334333412+01:00","level":"INFO","msg":"created new stream","id":"hcp2nnua"}
+{"time":"2026-02-16T14:48:58.334463957+01:00","level":"INFO","msg":"stream: started","id":"hcp2nnua"}
+{"time":"2026-02-16T14:48:58.334646162+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"hcp2nnua"}
+{"time":"2026-02-16T14:48:58.334915792+01:00","level":"INFO","msg":"handler: started","stream_id":"hcp2nnua"}
+{"time":"2026-02-16T14:48:58.335607891+01:00","level":"INFO","msg":"sender: started","stream_id":"hcp2nnua"}
+{"time":"2026-02-16T14:48:58.856867527+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-02-16T14:52:23.304019286+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-02-16T14:52:23.311581118+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-02-16T14:52:24.265756262+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.194049947,"progress":"601B/601B"},{"desc":"uploading output.log","runtime_seconds":0.194028588,"progress":"730B/730B"}],"total_operations":2}}
+{"time":"2026-02-16T14:52:24.316521491+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-16T14:52:25.759854428+01:00","level":"INFO","msg":"stream: closing","id":"hcp2nnua"}
+{"time":"2026-02-16T14:52:25.759926749+01:00","level":"INFO","msg":"handler: closed","stream_id":"hcp2nnua"}
+{"time":"2026-02-16T14:52:25.759957644+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hcp2nnua"}
+{"time":"2026-02-16T14:52:25.760019548+01:00","level":"INFO","msg":"sender: closed","stream_id":"hcp2nnua"}
+{"time":"2026-02-16T14:52:25.780571111+01:00","level":"INFO","msg":"stream: closed","id":"hcp2nnua"}

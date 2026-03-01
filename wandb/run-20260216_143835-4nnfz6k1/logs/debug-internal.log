@@ -1,0 +1,17 @@
+{"time":"2026-02-16T14:38:35.662378618+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2026-02-16T14:38:35.662413152+01:00","level":"INFO","msg":"created symlink","path":"/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/wandb/run-20260216_143835-4nnfz6k1/logs/debug-core.log"}
+{"time":"2026-02-16T14:38:35.791841453+01:00","level":"INFO","msg":"created new stream","id":"4nnfz6k1"}
+{"time":"2026-02-16T14:38:35.791898072+01:00","level":"INFO","msg":"stream: started","id":"4nnfz6k1"}
+{"time":"2026-02-16T14:38:35.791958725+01:00","level":"INFO","msg":"handler: started","stream_id":"4nnfz6k1"}
+{"time":"2026-02-16T14:38:35.791999658+01:00","level":"INFO","msg":"sender: started","stream_id":"4nnfz6k1"}
+{"time":"2026-02-16T14:38:35.792006755+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"4nnfz6k1"}
+{"time":"2026-02-16T14:38:36.371575334+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-02-16T14:45:18.942727536+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-02-16T14:45:18.949421788+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-02-16T14:45:19.904335278+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.224476986,"progress":"1.4KB/1.4KB"},{"desc":"uploading config.yaml","runtime_seconds":0.224469513,"progress":"601B/601B"}],"total_operations":2}}
+{"time":"2026-02-16T14:45:19.929285899+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-16T14:45:21.392321104+01:00","level":"INFO","msg":"stream: closing","id":"4nnfz6k1"}
+{"time":"2026-02-16T14:45:21.39239116+01:00","level":"INFO","msg":"handler: closed","stream_id":"4nnfz6k1"}
+{"time":"2026-02-16T14:45:21.392420741+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"4nnfz6k1"}
+{"time":"2026-02-16T14:45:21.392478423+01:00","level":"INFO","msg":"sender: closed","stream_id":"4nnfz6k1"}
+{"time":"2026-02-16T14:45:21.4124921+01:00","level":"INFO","msg":"stream: closed","id":"4nnfz6k1"}
