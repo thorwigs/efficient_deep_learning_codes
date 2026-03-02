@@ -1,19 +1,10 @@
 import torch
-
 import torchinfo
-
 
 import sys
 sys.path.append("/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/")
 
 from densenet import *
-import test
-
-test_dataloader = test.load_cifar_test(test.load_test_transformation())
-
-#device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
-#loaded_cpt = torch.load('stats/DN_300_scheduler_mixup_1.pth')
 
 config2 = {"epochs": 300,
           'lr': 0.1,
@@ -24,10 +15,6 @@ config2 = {"epochs": 300,
           "red": 0.5}
 
 model = densenet_cifar_plus_petit(**config2)
-#model.load_state_dict(loaded_cpt)
-model.eval()
-
-#model.to(device)
 
 ps = 0
 pu = 0.2

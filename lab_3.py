@@ -2,6 +2,7 @@ import torch
 from torch import nn
 import numpy
 import torchvision.transforms as transforms
+import torch.nn.utils.prune as prune
 from torchvision.transforms import v2
 from torchvision.datasets import CIFAR10
 import json
@@ -18,7 +19,8 @@ test_dataloader = test.load_cifar_test(test.load_test_transformation())
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-loaded_cpt = torch.load('stats/DN_300_scheduler_mixup_1.pth')
+loaded_cpt = torch.load('stats/DN_pruning_0_2.pth')
+pruned = True
 
 config2 = {"epochs": 300,
           'lr': 0.1,
@@ -29,6 +31,10 @@ config2 = {"epochs": 300,
           "red": 0.5}
 
 model = densenet_cifar_plus_petit(**config2)
+if pruned:
+    for idx, m in enumerate(model.modules()):
+        if hasattr(m, "weight") and isinstance(m, (nn.Linear, nn.Conv2d)):
+            prune.random_unstructured(m, name="weight", amount=0)
 model.load_state_dict(loaded_cpt)
 model.eval()
 model.to(device)
