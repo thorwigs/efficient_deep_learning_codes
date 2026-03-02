@@ -20,8 +20,7 @@ test_dataloader = test.load_cifar_test(test.load_test_transformation())
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 loaded_cpt = torch.load('stats/DN_pruning_0_2.pth')
-loaded_cpt = torch.load('stats/DN_300_scheduler_mixup_1.pth')
-pruned = False
+pruned = True
 
 config2 = {"epochs": 300,
           'lr': 0.1,
