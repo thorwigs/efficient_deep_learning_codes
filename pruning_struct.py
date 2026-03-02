@@ -1,4 +1,5 @@
 import torch
+import torchinfo
 from torch import nn
 import torch.nn.utils.prune as prune
 # import numpy
@@ -74,22 +75,41 @@ scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
 print("Test whole network on cifar test :")
 test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
 
+summ = torchinfo.summary(model, (1, 3, 32, 32), verbose=0)
+w = summ.total_params
+print(f"total params at first : {w}")
+
 model.train()
-print(f"traing + pruning : {amount}")
+print(f"training + pruning : {amount}")
 for idx, m in enumerate(model.modules()):
-    liste_pruned = []
 
-    modified = False
-    if isinstance(m, nn.Linear):
-        modified = True
+    if isinstance(m, nn.Sequential):
+        liste_pruned = []
+        
+        for idx2, m2 in enumerate(m.modules()):
+            if isinstance(m2, Bottleneck):
+                importance = torch.sum(torch.abs(m2.conv2.weight.data))
+                liste_pruned.append((importance, idx2))
 
+        liste_pruned.sort(key=lambda x: x[0])
 
-    elif isinstance(m, nn.Conv2d):
-        modified = True
-    elif isinstance(m, nn.BatchNorm2d):
-        modified = True
-    
-    if modified:
+        in_planes = m[0].conv1.in_channels
+        new_layers = []
+        growth_rate = model.growth_rate
+
+        for i in range(int(amount*len(liste_pruned))):
+            idx_prune = liste_pruned[i][1]
+            
+            old_layer = m[i]
+            new_layer = Bottleneck(in_planes, growth_rate)
+            new_layer.load_state_dict(old_layer.state_dict())
+            new_layers.append(new_layer)
+            in_planes += growth_rate
+
+        m = nn.Sequential(*new_layers)
+        model._modules[str(idx)] = m
+        model.to(device)
+
         acc += 1
 
         if acc % nb_acc == 0:
@@ -126,6 +146,11 @@ for epoch in range(epochs):
 
     scheduler.step()
     test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
+
+
+summ = torchinfo.summary(model, (1, 3, 32, 32), verbose=0)
+w = summ.total_params
+print(f"total params at the end : {w}")
 
 print("Test network after fine tunning on cifar test :")
 test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
