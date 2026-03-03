@@ -8,38 +8,34 @@ import torch.ao.quantization as quant
 
 class Bottleneck(nn.Module):
     def __init__(self, in_planes, growth_rate):
-        super().__init__()
-        self.conv1 = nn.Conv2d(in_planes, 4*growth_rate, kernel_size=1, bias=False)
-        self.bn1 = nn.BatchNorm2d(4*growth_rate)
+        super(Bottleneck, self).__init__()
+        self.bn1 = nn.BatchNorm2d(in_planes)
         self.relu1 = nn.ReLU(inplace=True)
-
-        self.conv2 = nn.Conv2d(4*growth_rate, growth_rate, kernel_size=3, padding=1, bias=False)
-        self.bn2 = nn.BatchNorm2d(growth_rate)
+        self.conv1 = nn.Conv2d(in_planes, 4*growth_rate, kernel_size=1, bias=False)
+        self.bn2 = nn.BatchNorm2d(4*growth_rate)
         self.relu2 = nn.ReLU(inplace=True)
+        self.conv2 = nn.Conv2d(4*growth_rate, growth_rate, kernel_size=3, padding=1, bias=False)
 
     def forward(self, x):
-        out = self.conv1(x)
-        out = self.relu1(self.bn1(out))
-
-        out = self.conv2(out)
-        out = self.relu2(self.bn2(out))
-
-        out = torch.cat([out, x], 1)
+        
+        out = self.conv1(self.relu1(self.bn1(x)))
+        out = self.conv2(self.relu1(self.bn2(out)))
+        out = torch.cat([out,x], 1)
         return out
 
 
 class Transition(nn.Module):
     def __init__(self, in_planes, out_planes):
-        super().__init__()
-        self.conv = nn.Conv2d(in_planes, out_planes, kernel_size=1, bias=False)
-        self.bn = nn.BatchNorm2d(out_planes)
+        super(Transition, self).__init__()
+        self.bn = nn.BatchNorm2d(in_planes)
         self.relu = nn.ReLU(inplace=True)
+        self.conv = nn.Conv2d(in_planes, out_planes, kernel_size=1, bias=False)
 
     def forward(self, x):
-        out = self.conv(x)
-        out = self.relu(self.bn(out))
+        out = self.conv(self.relu(self.bn(x)))
         out = F.avg_pool2d(out, 2)
         return out
+
 
 class DenseNet(nn.Module):
     def __init__(self, block, nblocks, growth_rate=12, reduction=0.5, num_classes=10):
@@ -99,34 +95,6 @@ class DenseNet(nn.Module):
 
         out = self.dequant(out)
         return out
-    
-    def fuse_model(self):
-        for m in self.modules():
-            if isinstance(m, Bottleneck):
-                torch.ao.quantization.fuse_modules(
-                    m,
-                    ['conv1', 'bn1', 'relu1'],
-                    inplace=True
-                )
-                torch.ao.quantization.fuse_modules(
-                    m,
-                    ['conv2', 'bn2', 'relu2'],
-                    inplace=True
-                )
-
-            if isinstance(m, Transition):
-                torch.ao.quantization.fuse_modules(
-                    m,
-                    ['conv', 'bn', 'relu'],
-                    inplace=True
-                )
-
-        # Fusion finale
-        torch.ao.quantization.fuse_modules(
-            self,
-            ['bn', 'relu'],
-            inplace=True
-        )
 
 def DenseNet121():
     return DenseNet(Bottleneck, [6,12,24,16], growth_rate=32)
