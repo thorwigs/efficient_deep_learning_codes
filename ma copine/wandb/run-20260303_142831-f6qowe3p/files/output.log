@@ -221,3 +221,17 @@ End of epoch 22 :
 	test accuracy = 80.48%
 Begining epoch 23:
 [23,   156] loss: 1.219
+[23,   312] loss: 1.262
+[23,   468] loss: 1.250
+[23,   624] loss: 1.246
+[23,   780] loss: 1.238
+End of epoch 23 :
+	mean loss = 1.242
+	test loss = 6.230
+	test accuracy = 82.27%
+Begining epoch 24:
+[24,   156] loss: 1.185
+[24,   312] loss: 1.257
+[24,   468] loss: 1.264
+[24,   624] loss: 1.198
+[24,   780] loss: 1.239
