@@ -1,0 +1,17 @@
+{"time":"2026-03-02T22:05:41.54671368+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2026-03-02T22:05:41.553014736+01:00","level":"INFO","msg":"created symlink","path":"/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/wandb/run-20260302_220541-wwuk5cgb/logs/debug-core.log"}
+{"time":"2026-03-02T22:05:41.794410199+01:00","level":"INFO","msg":"created new stream","id":"wwuk5cgb"}
+{"time":"2026-03-02T22:05:41.800685405+01:00","level":"INFO","msg":"stream: started","id":"wwuk5cgb"}
+{"time":"2026-03-02T22:05:41.800748408+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"wwuk5cgb"}
+{"time":"2026-03-02T22:05:41.800768312+01:00","level":"INFO","msg":"handler: started","stream_id":"wwuk5cgb"}
+{"time":"2026-03-02T22:05:41.803701246+01:00","level":"INFO","msg":"sender: started","stream_id":"wwuk5cgb"}
+{"time":"2026-03-02T22:05:42.401921734+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-03-02T22:05:48.177700217+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-03-02T22:05:48.191795237+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-03-02T22:05:48.198236379+01:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-03-02T22:05:49.431035525+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-02T22:05:50.808188644+01:00","level":"INFO","msg":"stream: closing","id":"wwuk5cgb"}
+{"time":"2026-03-02T22:05:50.815706663+01:00","level":"INFO","msg":"handler: closed","stream_id":"wwuk5cgb"}
+{"time":"2026-03-02T22:05:50.815795106+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wwuk5cgb"}
+{"time":"2026-03-02T22:05:50.815858161+01:00","level":"INFO","msg":"sender: closed","stream_id":"wwuk5cgb"}
+{"time":"2026-03-02T22:05:50.835866052+01:00","level":"INFO","msg":"stream: closed","id":"wwuk5cgb"}

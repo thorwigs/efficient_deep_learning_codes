@@ -1,0 +1,17 @@
+{"time":"2026-03-02T16:37:14.008697634+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2026-03-02T16:37:14.008764017+01:00","level":"INFO","msg":"created symlink","path":"/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/wandb/run-20260302_163713-rq2ptbtb/logs/debug-core.log"}
+{"time":"2026-03-02T16:37:14.141165586+01:00","level":"INFO","msg":"created new stream","id":"rq2ptbtb"}
+{"time":"2026-03-02T16:37:14.141282751+01:00","level":"INFO","msg":"stream: started","id":"rq2ptbtb"}
+{"time":"2026-03-02T16:37:14.141407159+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"rq2ptbtb"}
+{"time":"2026-03-02T16:37:14.141759908+01:00","level":"INFO","msg":"handler: started","stream_id":"rq2ptbtb"}
+{"time":"2026-03-02T16:37:14.142007892+01:00","level":"INFO","msg":"sender: started","stream_id":"rq2ptbtb"}
+{"time":"2026-03-02T16:37:14.803195037+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-03-02T16:37:16.112812674+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-03-02T16:37:16.114038736+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-03-02T16:37:17.066355147+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.183949354,"progress":"24B/24B"}],"total_operations":1}}
+{"time":"2026-03-02T16:37:17.386312377+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-02T16:37:18.700457475+01:00","level":"INFO","msg":"stream: closing","id":"rq2ptbtb"}
+{"time":"2026-03-02T16:37:18.700563301+01:00","level":"INFO","msg":"handler: closed","stream_id":"rq2ptbtb"}
+{"time":"2026-03-02T16:37:18.70059423+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"rq2ptbtb"}
+{"time":"2026-03-02T16:37:18.700620999+01:00","level":"INFO","msg":"sender: closed","stream_id":"rq2ptbtb"}
+{"time":"2026-03-02T16:37:18.713405179+01:00","level":"INFO","msg":"stream: closed","id":"rq2ptbtb"}

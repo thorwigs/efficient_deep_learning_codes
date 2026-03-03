@@ -59,7 +59,7 @@ trainloader = DataLoader(c10train,batch_size=64,shuffle=True)
 epochs = 5
 acc = 0
 nb_acc = 8
-amount = 0.2
+amount = 0.9
 lr = 0.01
 momentum = 0.9
 weight_decay = 5e-04
@@ -124,10 +124,11 @@ for epoch in range(epochs):
     scheduler.step()
     test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
 
+model.eval()
 print("Test network after fine tunning on cifar test :")
 test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
 
-path = "stats/DN_pruning_0_2"
+path = "stats/DN_pruning_0_9"
 torch.save(model.state_dict(), path+".pth")
 
 print("Test network after half:")

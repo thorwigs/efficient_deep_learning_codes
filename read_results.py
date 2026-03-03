@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt 
 
-with open("results", "r") as file:
+with open("results_v2", "r") as file:
     lines = file.read().split("\n")
 
 def transform_line(line):
@@ -8,7 +8,7 @@ def transform_line(line):
         return ()
     
     name, nb_param, percentage = line.split(" ; ")
-    nb_param = int(nb_param.replace(",", ""))
+    nb_param = float(nb_param.replace(",", ""))
     percentage = float(percentage[:-1])
 
     return name, nb_param, percentage
@@ -26,11 +26,16 @@ for line in lines:
 print(results)
 
 plt.figure(figsize=(10,8))
-colors = ["purple", "red", "blue"]
-for models, color in zip(results, colors):
+colors = ["purple", "navy", "red"]
+n = max(len(results), len(colors))
+for models, color in zip(results[:n], colors[:n]):
     for name, nb_param, percentage in models:
         plt.scatter(nb_param, percentage, c=color, marker="x")
-        plt.annotate(name, (nb_param, percentage), c=color, xytext=(5, 5), textcoords="offset points", ha="left")
+        plt.annotate(name, (nb_param, percentage), c=color, xytext=(5, 5), textcoords="offset points", ha="left", fontsize=7)
 
 plt.axhline(y=90, color="red", linestyle="--")
-plt.savefig("scatter_results.png")
+plt.grid()
+plt.title("scatter plot accuracy with respect to the score")
+plt.xlabel("score")
+plt.ylabel("accuracy (%)")
+plt.savefig("scatter_results_v2.png")

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/training.py", line 165, in <module>
+    stats = train(net, trainloader_DA, test_dataloader, path, run, **config2)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: train() got an unexpected keyword argument 'nb_blocks'
