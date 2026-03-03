@@ -180,3 +180,44 @@ End of epoch 18 :
 	test loss = 6.322
 	test accuracy = 81.18%
 Begining epoch 19:
+[19,   156] loss: 1.286
+[19,   312] loss: 1.290
+[19,   468] loss: 1.260
+[19,   624] loss: 1.269
+[19,   780] loss: 1.243
+End of epoch 19 :
+	mean loss = 1.269
+	test loss = 6.254
+	test accuracy = 81.37%
+Begining epoch 20:
+[20,   156] loss: 1.308
+[20,   312] loss: 1.278
+[20,   468] loss: 1.277
+[20,   624] loss: 1.279
+[20,   780] loss: 1.287
+End of epoch 20 :
+	mean loss = 1.287
+	test loss = 6.618
+	test accuracy = 80.76%
+Begining epoch 21:
+[21,   156] loss: 1.298
+[21,   312] loss: 1.287
+[21,   468] loss: 1.279
+[21,   624] loss: 1.317
+[21,   780] loss: 1.262
+End of epoch 21 :
+	mean loss = 1.288
+	test loss = 6.594
+	test accuracy = 80.82%
+Begining epoch 22:
+[22,   156] loss: 1.249
+[22,   312] loss: 1.282
+[22,   468] loss: 1.287
+[22,   624] loss: 1.293
+[22,   780] loss: 1.243
+End of epoch 22 :
+	mean loss = 1.272
+	test loss = 6.763
+	test accuracy = 80.48%
+Begining epoch 23:
+[23,   156] loss: 1.219
