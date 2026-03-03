@@ -1,0 +1,17 @@
+{"time":"2026-03-03T15:12:57.748652667+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2026-03-03T15:12:57.748687543+01:00","level":"INFO","msg":"created symlink","path":"/homes/c23bosca/Documents/efficient_deep_learning_codes/ma copine/wandb/run-20260303_151257-9709x7xf/logs/debug-core.log"}
+{"time":"2026-03-03T15:12:57.883506831+01:00","level":"INFO","msg":"created new stream","id":"9709x7xf"}
+{"time":"2026-03-03T15:12:57.883587722+01:00","level":"INFO","msg":"stream: started","id":"9709x7xf"}
+{"time":"2026-03-03T15:12:57.88363783+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"9709x7xf"}
+{"time":"2026-03-03T15:12:57.883731543+01:00","level":"INFO","msg":"sender: started","stream_id":"9709x7xf"}
+{"time":"2026-03-03T15:12:57.883775948+01:00","level":"INFO","msg":"handler: started","stream_id":"9709x7xf"}
+{"time":"2026-03-03T15:12:58.609989167+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-03-03T15:15:56.772902689+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-03-03T15:15:56.780377677+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-03-03T15:15:57.700941709+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-03T15:15:57.773331731+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 0-0, summary, console lines 7-26","runtime_seconds":0.072231196}],"total_operations":1}}
+{"time":"2026-03-03T15:15:59.157784417+01:00","level":"INFO","msg":"stream: closing","id":"9709x7xf"}
+{"time":"2026-03-03T15:15:59.157814462+01:00","level":"INFO","msg":"handler: closed","stream_id":"9709x7xf"}
+{"time":"2026-03-03T15:15:59.157824378+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"9709x7xf"}
+{"time":"2026-03-03T15:15:59.15792367+01:00","level":"INFO","msg":"sender: closed","stream_id":"9709x7xf"}
+{"time":"2026-03-03T15:15:59.177381148+01:00","level":"INFO","msg":"stream: closed","id":"9709x7xf"}

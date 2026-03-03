@@ -1,0 +1,27 @@
+Begining training on device : cuda:0
+Begining epoch 1:
+[1,   156] loss: 2.025
+[1,   312] loss: 1.866
+[1,   468] loss: 1.793
+[1,   624] loss: 1.734
+[1,   780] loss: 1.682
+End of epoch 1 :
+	mean loss = 1.820
+	test loss = 12.761
+	test accuracy = 57.22%
+Traceback (most recent call last):
+  File "/homes/c23bosca/Documents/efficient_deep_learning_codes/ma copine/training_8bits_gfactorization.py", line 154, in <module>
+    stats = train(net, trainloader_DA, test_dataloader, path, run, **config2)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/c23bosca/Documents/efficient_deep_learning_codes/ma copine/training_8bits_gfactorization.py", line 142, in train
+    torch.save(net.state_dict(), path+".pth")
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/serialization.py", line 849, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/serialization.py", line 716, in _open_zipfile_writer
+    return container(name_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/serialization.py", line 687, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Parent directory /homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats does not exist.
