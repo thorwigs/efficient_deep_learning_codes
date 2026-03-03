@@ -11,10 +11,10 @@ from torch.utils.data.dataloader import DataLoader
 import torch.ao.quantization as quant
 
 
-import sys
-sys.path.append("/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/")
+# import sys
+# sys.path.append("/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/")
 
-from densenet import *
+from densenet_ancien import *
 import test
 
 test_dataloader = test.load_cifar_test(test.load_test_transformation())
@@ -22,7 +22,7 @@ test_dataloader = test.load_cifar_test(test.load_test_transformation())
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 config2 = {"epochs": 300,
-          'lr': 0.1,
+          'lr': 0.001,
           "momentum": 0.9,
           "weight_decay": 5e-4, 
           "nb_blocks": [4,8,16,12],
@@ -70,8 +70,11 @@ trainloader_DA = DataLoader(c10train_DA,batch_size=64,shuffle=True, collate_fn=c
 
 import torch.optim as optim
 
-def train(net, train_loader, test_loader, path, run, stats={}, epoch_start=0, optimizer_class=optim.SGD, criterion=nn.CrossEntropyLoss(), epochs=30, lr=0.01, momentum=0.9, weight_decay=5e-4, **argv):
-    optimizer = optimizer_class(net.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
+def train(net, train_loader, test_loader, path, run, stats={}, epoch_start=0, optimizer_class="SGD", criterion=nn.CrossEntropyLoss(), epochs=30, lr=0.01, momentum=0.9, weight_decay=5e-4, **argv):
+    if optimizer_class == "SGD":
+        optimizer = optim.SGD(net.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
+    elif optimizer_class == "Adam":
+        optimizer = optim.Adam(net.parameters(), lr=lr, weight_decay=weight_decay, amsgrad=True)
 
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
         optimizer,
@@ -147,8 +150,8 @@ def train(net, train_loader, test_loader, path, run, stats={}, epoch_start=0, op
     return stats
 
 with wandb.init(project=project, config=config2) as run:
-    path = "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_scheduler_mixup_quant_3"
-    stats = train(net, trainloader_DA, test_dataloader, path, run, **config2)
+    path = "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_ADAM_scheduler_mixup_quant_1"
+    stats = train(net, trainloader_DA, test_dataloader, path, run, optimizer_class="Adam", **config2)
 
 
 net.eval()

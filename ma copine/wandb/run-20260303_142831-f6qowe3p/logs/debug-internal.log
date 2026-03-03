@@ -1,0 +1,8 @@
+{"time":"2026-03-03T14:28:31.831011381+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2026-03-03T14:28:31.83106716+01:00","level":"INFO","msg":"created symlink","path":"/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/wandb/run-20260303_142831-f6qowe3p/logs/debug-core.log"}
+{"time":"2026-03-03T14:28:32.081753179+01:00","level":"INFO","msg":"created new stream","id":"f6qowe3p"}
+{"time":"2026-03-03T14:28:32.081890627+01:00","level":"INFO","msg":"stream: started","id":"f6qowe3p"}
+{"time":"2026-03-03T14:28:32.08194552+01:00","level":"INFO","msg":"handler: started","stream_id":"f6qowe3p"}
+{"time":"2026-03-03T14:28:32.082055179+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"f6qowe3p"}
+{"time":"2026-03-03T14:28:32.105910469+01:00","level":"INFO","msg":"sender: started","stream_id":"f6qowe3p"}
+{"time":"2026-03-03T14:28:32.562202328+01:00","level":"INFO","msg":"Starting system monitor"}

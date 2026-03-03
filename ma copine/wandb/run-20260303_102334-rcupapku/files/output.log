@@ -1,0 +1,285 @@
+Begining training on device : cuda:0
+Begining epoch 1:
+[1,   156] loss: 2.457
+[1,   312] loss: 2.145
+[1,   468] loss: 2.116
+[1,   624] loss: 2.131
+[1,   780] loss: 2.102
+End of epoch 1 :
+	mean loss = 2.190
+	test loss = 19.123
+	test accuracy = 23.77%
+Begining epoch 2:
+[2,   156] loss: 2.125
+[2,   312] loss: 2.095
+[2,   468] loss: 2.109
+[2,   624] loss: 2.118
+[2,   780] loss: 2.126
+End of epoch 2 :
+	mean loss = 2.115
+	test loss = 19.689
+	test accuracy = 24.17%
+Begining epoch 3:
+[3,   156] loss: 2.121
+[3,   312] loss: 2.109
+[3,   468] loss: 2.152
+[3,   624] loss: 2.181
+[3,   780] loss: 2.167
+End of epoch 3 :
+	mean loss = 2.146
+	test loss = 20.690
+	test accuracy = 21.83%
+Begining epoch 4:
+[4,   156] loss: 2.150
+[4,   312] loss: 2.163
+[4,   468] loss: 2.165
+[4,   624] loss: 2.162
+[4,   780] loss: 2.174
+End of epoch 4 :
+	mean loss = 2.163
+	test loss = 20.247
+	test accuracy = 22.78%
+Begining epoch 5:
+[5,   156] loss: 2.156
+[5,   312] loss: 2.168
+[5,   468] loss: 2.170
+[5,   624] loss: 2.181
+[5,   780] loss: 2.177
+End of epoch 5 :
+	mean loss = 2.171
+	test loss = 20.699
+	test accuracy = 16.34%
+Begining epoch 6:
+[6,   156] loss: 2.251
+[6,   312] loss: 2.313
+[6,   468] loss: 2.310
+[6,   624] loss: 2.303
+[6,   780] loss: 2.305
+End of epoch 6 :
+	mean loss = 2.297
+	test loss = 22.665
+	test accuracy = 10.00%
+Begining epoch 7:
+[7,   156] loss: 2.306
+[7,   312] loss: 2.305
+[7,   468] loss: 2.305
+[7,   624] loss: 2.305
+[7,   780] loss: 2.309
+End of epoch 7 :
+	mean loss = 2.306
+	test loss = 22.755
+	test accuracy = 10.00%
+Begining epoch 8:
+[8,   156] loss: 2.313
+[8,   312] loss: 2.312
+[8,   468] loss: 2.314
+[8,   624] loss: 2.313
+[8,   780] loss: 2.313
+End of epoch 8 :
+	mean loss = 2.313
+	test loss = 22.897
+	test accuracy = 10.00%
+Begining epoch 9:
+[9,   156] loss: 2.315
+[9,   312] loss: 2.305
+[9,   468] loss: 2.306
+[9,   624] loss: 2.306
+[9,   780] loss: 2.306
+End of epoch 9 :
+	mean loss = 2.307
+	test loss = 22.630
+	test accuracy = 10.00%
+Begining epoch 10:
+[10,   156] loss: 2.308
+[10,   312] loss: 2.307
+[10,   468] loss: 2.309
+[10,   624] loss: 2.309
+[10,   780] loss: 2.312
+End of epoch 10 :
+	mean loss = 2.309
+	test loss = 22.726
+	test accuracy = 10.00%
+Begining epoch 11:
+[11,   156] loss: 2.311
+[11,   312] loss: 2.313
+[11,   468] loss: 2.313
+[11,   624] loss: 2.311
+[11,   780] loss: 2.315
+End of epoch 11 :
+	mean loss = 2.313
+	test loss = 22.748
+	test accuracy = 10.00%
+Begining epoch 12:
+[12,   156] loss: 2.314
+[12,   312] loss: 2.304
+[12,   468] loss: 2.305
+[12,   624] loss: 2.306
+[12,   780] loss: 2.305
+End of epoch 12 :
+	mean loss = 2.307
+	test loss = 22.722
+	test accuracy = 10.00%
+Begining epoch 13:
+[13,   156] loss: 2.314
+[13,   312] loss: 2.309
+[13,   468] loss: 2.309
+[13,   624] loss: 2.312
+[13,   780] loss: 2.312
+End of epoch 13 :
+	mean loss = 2.311
+	test loss = 22.743
+	test accuracy = 10.00%
+Begining epoch 14:
+[14,   156] loss: 2.311
+[14,   312] loss: 2.311
+[14,   468] loss: 2.317
+[14,   624] loss: 2.315
+[14,   780] loss: 2.315
+End of epoch 14 :
+	mean loss = 2.314
+	test loss = 22.653
+	test accuracy = 10.04%
+Begining epoch 15:
+[15,   156] loss: 2.310
+[15,   312] loss: 2.311
+[15,   468] loss: 2.314
+[15,   624] loss: 2.310
+[15,   780] loss: 2.312
+End of epoch 15 :
+	mean loss = 2.311
+	test loss = 22.632
+	test accuracy = 10.00%
+Begining epoch 16:
+[16,   156] loss: 2.310
+[16,   312] loss: 2.305
+[16,   468] loss: 2.306
+[16,   624] loss: 2.304
+[16,   780] loss: 2.305
+End of epoch 16 :
+	mean loss = 2.306
+	test loss = 22.682
+	test accuracy = 10.00%
+Begining epoch 17:
+[17,   156] loss: 2.312
+[17,   312] loss: 2.306
+[17,   468] loss: 2.309
+[17,   624] loss: 2.309
+[17,   780] loss: 2.311
+End of epoch 17 :
+	mean loss = 2.309
+	test loss = 22.670
+	test accuracy = 10.00%
+Begining epoch 18:
+[18,   156] loss: 2.319
+[18,   312] loss: 2.313
+[18,   468] loss: 2.314
+[18,   624] loss: 2.312
+[18,   780] loss: 2.310
+End of epoch 18 :
+	mean loss = 2.314
+	test loss = 22.698
+	test accuracy = 10.00%
+Begining epoch 19:
+[19,   156] loss: 2.308
+[19,   312] loss: 2.304
+[19,   468] loss: 2.306
+[19,   624] loss: 2.306
+[19,   780] loss: 2.306
+End of epoch 19 :
+	mean loss = 2.306
+	test loss = 22.793
+	test accuracy = 10.00%
+Begining epoch 20:
+[20,   156] loss: 2.315
+[20,   312] loss: 2.312
+[20,   468] loss: 2.313
+[20,   624] loss: 2.314
+[20,   780] loss: 2.313
+End of epoch 20 :
+	mean loss = 2.313
+	test loss = 22.633
+	test accuracy = 10.00%
+Begining epoch 21:
+[21,   156] loss: 2.306
+[21,   312] loss: 2.304
+[21,   468] loss: 2.306
+[21,   624] loss: 2.305
+[21,   780] loss: 2.307
+End of epoch 21 :
+	mean loss = 2.306
+	test loss = 22.725
+	test accuracy = 9.98%
+Begining epoch 22:
+[22,   156] loss: 2.311
+[22,   312] loss: 2.309
+[22,   468] loss: 2.307
+[22,   624] loss: 2.306
+[22,   780] loss: 2.312
+End of epoch 22 :
+	mean loss = 2.309
+	test loss = 22.782
+	test accuracy = 10.00%
+Begining epoch 23:
+[23,   156] loss: 2.313
+[23,   312] loss: 2.315
+[23,   468] loss: 2.313
+[23,   624] loss: 2.313
+[23,   780] loss: 2.310
+End of epoch 23 :
+	mean loss = 2.313
+	test loss = 22.690
+	test accuracy = 10.00%
+Begining epoch 24:
+[24,   156] loss: 2.313
+[24,   312] loss: 2.307
+[24,   468] loss: 2.305
+[24,   624] loss: 2.305
+[24,   780] loss: 2.307
+End of epoch 24 :
+	mean loss = 2.307
+	test loss = 22.780
+	test accuracy = 10.00%
+Begining epoch 25:
+[25,   156] loss: 2.314
+[25,   312] loss: 2.308
+Traceback (most recent call last):
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/training_ancien.py", line 154, in <module>
+    stats = train(net, trainloader_DA, test_dataloader, path, run, optimizer_class="Adam", **config2)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/training_ancien.py", line 106, in train
+    outputs = net(inputs)
+              ^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/densenet_ancien.py", line 89, in forward
+    out = self.trans3(self.dense3(out))
+                      ^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/densenet_ancien.py", line 21, in forward
+    out = self.conv1(self.relu1(self.bn1(x)))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1831, in _call_impl
+    from torch.compiler import is_compiling
+  File "<frozen importlib._bootstrap>", line 1390, in _handle_fromlist
+KeyboardInterrupt

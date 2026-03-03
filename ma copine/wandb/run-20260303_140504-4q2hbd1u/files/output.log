@@ -1,0 +1,107 @@
+Begining training on device : cuda:0
+Begining epoch 1:
+[1,   156] loss: 2.140
+[1,   312] loss: 2.140
+[1,   468] loss: 1.988
+[1,   624] loss: 1.932
+[1,   780] loss: 1.892
+End of epoch 1 :
+	mean loss = 2.018
+	test loss = 15.416
+	test accuracy = 44.99%
+Begining epoch 2:
+[2,   156] loss: 1.852
+[2,   312] loss: 1.790
+[2,   468] loss: 1.775
+[2,   624] loss: 1.716
+[2,   780] loss: 1.693
+End of epoch 2 :
+	mean loss = 1.765
+	test loss = 12.990
+	test accuracy = 55.17%
+Begining epoch 3:
+[3,   156] loss: 1.675
+[3,   312] loss: 1.614
+[3,   468] loss: 1.598
+[3,   624] loss: 1.635
+[3,   780] loss: 1.610
+End of epoch 3 :
+	mean loss = 1.627
+	test loss = 10.991
+	test accuracy = 64.48%
+Begining epoch 4:
+[4,   156] loss: 1.563
+[4,   312] loss: 1.564
+[4,   468] loss: 1.535
+[4,   624] loss: 1.506
+[4,   780] loss: 1.518
+End of epoch 4 :
+	mean loss = 1.538
+	test loss = 9.908
+	test accuracy = 68.65%
+Begining epoch 5:
+[5,   156] loss: 1.513
+[5,   312] loss: 1.518
+[5,   468] loss: 1.507
+[5,   624] loss: 1.489
+[5,   780] loss: 1.508
+End of epoch 5 :
+	mean loss = 1.508
+	test loss = 10.248
+	test accuracy = 67.58%
+Begining epoch 6:
+[6,   156] loss: 1.495
+[6,   312] loss: 1.525
+[6,   468] loss: 1.472
+[6,   624] loss: 1.479
+[6,   780] loss: 1.489
+End of epoch 6 :
+	mean loss = 1.491
+	test loss = 9.306
+	test accuracy = 71.80%
+Begining epoch 7:
+[7,   156] loss: 1.459
+[7,   312] loss: 1.435
+[7,   468] loss: 1.460
+[7,   624] loss: 1.468
+[7,   780] loss: 1.466
+End of epoch 7 :
+	mean loss = 1.459
+	test loss = 8.981
+	test accuracy = 71.86%
+Begining epoch 8:
+[8,   156] loss: 1.459
+[8,   312] loss: 1.459
+[8,   468] loss: 1.432
+[8,   624] loss: 1.457
+[8,   780] loss: 1.450
+End of epoch 8 :
+	mean loss = 1.451
+	test loss = 9.780
+	test accuracy = 70.88%
+Begining epoch 9:
+Traceback (most recent call last):
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/training_ancien.py", line 154, in <module>
+    stats = train(net, trainloader_DA, test_dataloader, path, run, optimizer_class="SGD", **config2)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/training_ancien.py", line 113, in train
+    optimizer.step()
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py", line 137, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/optim/optimizer.py", line 487, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/optim/sgd.py", line 119, in step
+    has_sparse_grad = self._init_group(
+                      ^^^^^^^^^^^^^^^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/optim/sgd.py", line 96, in _init_group
+    state = self.state[p]
+            ~~~~~~~~~~^^^
+  File "/opt/img/effdl-venv/lib/python3.12/site-packages/torch/_tensor.py", line 1121, in __hash__
+    def __hash__(self):
+
+KeyboardInterrupt

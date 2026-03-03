@@ -1,0 +1,30 @@
+Begining training on device : cuda:0
+Begining epoch 1:
+[1,   156] loss: 2.419
+[1,   312] loss: 2.160
+[1,   468] loss: 2.159
+[1,   624] loss: 2.157
+[1,   780] loss: 2.154
+End of epoch 1 :
+	mean loss = 2.210
+	test loss = 20.934
+	test accuracy = 19.17%
+Begining epoch 2:
+[2,   156] loss: 2.206
+[2,   312] loss: 2.206
+[2,   468] loss: 2.170
+[2,   624] loss: 2.184
+[2,   780] loss: 2.193
+End of epoch 2 :
+	mean loss = 2.192
+	test loss = 21.856
+	test accuracy = 14.36%
+Begining epoch 3:
+Traceback (most recent call last):
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/training_ancien.py", line 154, in <module>
+    stats = train(net, trainloader_DA, test_dataloader, path, run, optimizer_class="Adam", **config2)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/training_ancien.py", line 117, in train
+    running_loss += loss.item()
+                    ^^^^^^^^^^^
+KeyboardInterrupt

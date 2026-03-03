@@ -1,0 +1,17 @@
+{"time":"2026-03-03T14:19:32.943102283+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2026-03-03T14:19:32.943139836+01:00","level":"INFO","msg":"created symlink","path":"/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/wandb/run-20260303_141927-8g9jxfze/logs/debug-core.log"}
+{"time":"2026-03-03T14:19:33.100925944+01:00","level":"INFO","msg":"created new stream","id":"8g9jxfze"}
+{"time":"2026-03-03T14:19:33.100975662+01:00","level":"INFO","msg":"stream: started","id":"8g9jxfze"}
+{"time":"2026-03-03T14:19:33.101275931+01:00","level":"INFO","msg":"handler: started","stream_id":"8g9jxfze"}
+{"time":"2026-03-03T14:19:33.101338621+01:00","level":"INFO","msg":"sender: started","stream_id":"8g9jxfze"}
+{"time":"2026-03-03T14:19:33.101369408+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"8g9jxfze"}
+{"time":"2026-03-03T14:19:34.219920732+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-03-03T14:22:52.215158565+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-03-03T14:22:52.222618604+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-03-03T14:22:53.216570609+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.141446663,"progress":"710B/710B"},{"desc":"uploading output.log","runtime_seconds":0.14099135,"progress":"1.0KB/1.0KB"}],"total_operations":2}}
+{"time":"2026-03-03T14:22:53.456009079+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-03T14:22:54.902014733+01:00","level":"INFO","msg":"stream: closing","id":"8g9jxfze"}
+{"time":"2026-03-03T14:22:54.902091931+01:00","level":"INFO","msg":"handler: closed","stream_id":"8g9jxfze"}
+{"time":"2026-03-03T14:22:54.902124575+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"8g9jxfze"}
+{"time":"2026-03-03T14:22:54.902167419+01:00","level":"INFO","msg":"sender: closed","stream_id":"8g9jxfze"}
+{"time":"2026-03-03T14:22:54.922036091+01:00","level":"INFO","msg":"stream: closed","id":"8g9jxfze"}

@@ -1,0 +1,17 @@
+{"time":"2026-03-03T11:01:52.525899151+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2026-03-03T11:01:52.525968014+01:00","level":"INFO","msg":"created symlink","path":"/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/wandb/run-20260303_110152-j1yxl6rp/logs/debug-core.log"}
+{"time":"2026-03-03T11:01:52.670970965+01:00","level":"INFO","msg":"created new stream","id":"j1yxl6rp"}
+{"time":"2026-03-03T11:01:52.671111051+01:00","level":"INFO","msg":"stream: started","id":"j1yxl6rp"}
+{"time":"2026-03-03T11:01:52.671240132+01:00","level":"INFO","msg":"handler: started","stream_id":"j1yxl6rp"}
+{"time":"2026-03-03T11:01:52.671196432+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"j1yxl6rp"}
+{"time":"2026-03-03T11:01:52.671322589+01:00","level":"INFO","msg":"sender: started","stream_id":"j1yxl6rp"}
+{"time":"2026-03-03T11:01:53.324148915+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-03-03T14:04:38.927854055+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-03-03T14:04:38.934567058+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-03-03T14:04:39.904189713+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.29415588,"progress":"28.7KB/28.7KB"}],"total_operations":1}}
+{"time":"2026-03-03T14:04:39.928957956+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-03T14:04:41.318424709+01:00","level":"INFO","msg":"stream: closing","id":"j1yxl6rp"}
+{"time":"2026-03-03T14:04:41.318462963+01:00","level":"INFO","msg":"handler: closed","stream_id":"j1yxl6rp"}
+{"time":"2026-03-03T14:04:41.318472845+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"j1yxl6rp"}
+{"time":"2026-03-03T14:04:41.318477173+01:00","level":"INFO","msg":"sender: closed","stream_id":"j1yxl6rp"}
+{"time":"2026-03-03T14:04:41.337465652+01:00","level":"INFO","msg":"stream: closed","id":"j1yxl6rp"}
