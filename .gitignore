@@ -1,0 +1,11 @@
+# Weights & Biases
+wandb/
+ma\ copine/wandb/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environnements
+.venv/
+env/

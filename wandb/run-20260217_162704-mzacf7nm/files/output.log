@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/lab_3.py", line 259, in <module>
-    stats = train(model_bc, trainloader, test_dataloader, path, run, **config)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/lab_3.py", line 182, in train
-    optimizer = optimizer_class(net.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
-                                ^^^^^^^^^^^^^^
-AttributeError: 'BC' object has no attribute 'parameters'

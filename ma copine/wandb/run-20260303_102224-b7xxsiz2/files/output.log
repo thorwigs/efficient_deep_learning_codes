@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/training_ancien.py", line 151, in <module>
-    stats = train(net, trainloader_DA, test_dataloader, path, run, optimizer_class=optim.Adam, **config2)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine/training_ancien.py", line 74, in train
-    optimizer = optimizer_class(net.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: Adam.__init__() got an unexpected keyword argument 'momentum'
