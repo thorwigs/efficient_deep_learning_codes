@@ -9,6 +9,7 @@ import json
 import torch.backends.cudnn as cudnn
 from torch.utils.data.dataloader import DataLoader
 import torch.ao.quantization as quant
+from os.path import exists, dirname, basename
 
 
 import sys
@@ -139,10 +140,16 @@ def train(net, train_loader, test_loader, path, run, stats={}, epoch_start=0, op
             best_acc = acc
     
             if path != "":
-                torch.save(net.state_dict(), path+".pth")
+                to_write = path
+                if not exists(dirname(path)):
+                    to_write = "./"+basename(path)
+                torch.save(net.state_dict(), to_write+".pth")
 
     if path != "":
-        with open(path+".json", "w") as file:
+        to_write = path
+        if not exists(dirname(path)):
+            to_write = "./"+basename(path)
+        with open(to_write+".json", "w") as file:
             json.dump(stats, file)
     
     print(f"Best test accuracy during training : {best_acc}")

@@ -4,6 +4,7 @@ ma\ copine/wandb/
 
 # Python
 __pycache__/
+ma\ copine/__pycache__/
 *.pyc
 
 # Environnements
