@@ -35,13 +35,10 @@ net = densenet_cifar_plus_petit(**config2)
 
 net.qconfig = quant.get_default_qat_qconfig("fbgemm")
 torch.backends.quantized.engine = 'fbgemm'
-
 quant.prepare_qat(net, inplace=True)
 
 import wandb
-
 wandb.login()
-
 project = "training factorization+quantization"
 
 
