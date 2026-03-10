@@ -34,6 +34,7 @@ config2 = {"epochs": 300,
 net = densenet_cifar_plus_petit(**config2)
 
 net.qconfig = quant.get_default_qat_qconfig("fbgemm")
+torch.backends.quantized.engine = 'fbgemm'
 
 quant.prepare_qat(net, inplace=True)
 
