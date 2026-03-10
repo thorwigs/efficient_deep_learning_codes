@@ -20,10 +20,10 @@ from os.path import exists, dirname, basename
 
 test_dataloader = test.load_cifar_test(test.load_test_transformation())
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 
 config2 = {"epochs": 300,
-          'lr': 0.001,
+          'learning_rate': 0.001,
           "momentum": 0.9,
           "weight_decay": 5e-4, 
           "nb_blocks": [4,8,16,12],
@@ -35,7 +35,7 @@ config2 = {"epochs": 300,
 teachermodel = densenet_8bits.densenet_cifar_plus_petit(**config2)
 teachermodel.qconfig = quant.get_default_qat_qconfig("fbgemm")
 quant.prepare_qat(teachermodel, inplace=True)
-loaded_cpt = torch.load('stats/DN_100_ADAM_scheduler_mixup_quant_1.pth')
+loaded_cpt = torch.load('/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_ADAM_scheduler_mixup_quant_1.pth')
 teachermodel.load_state_dict(loaded_cpt)
 
 
@@ -44,7 +44,7 @@ studentmodel = densenet_8bits_dfactorization.densenet_cifar_plus_petit(**config2
 studentmodel.qconfig = quant.get_default_qat_qconfig("fbgemm")
 torch.backends.quantized.engine = 'fbgemm'
 quant.prepare_qat(studentmodel, inplace=True)
-loaded_cpt2 = torch.load('stats/DN_100_scheduler_mixup_quant_3.pth')
+loaded_cpt2 = torch.load('/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_scheduler_mixup_quant_3.pth')
 studentmodel.load_state_dict(loaded_cpt2)
 
 # J'importe les modules wandb
@@ -80,7 +80,7 @@ trainloader_DA = DataLoader(c10train_DA,batch_size=64,shuffle=True, collate_fn=c
 
 
 
-def train_knowledge_distillation(teacher, student, train_loader, epochs, learning_rate, T, soft_target_loss_weight, ce_loss_weight, device,test_loader, criterion=nn.CrossEntropyLoss()):
+def train_knowledge_distillation(teacher, student, train_loader, epochs, learning_rate, T, soft_target_loss_weight, ce_loss_weight, device,test_loader, criterion=nn.CrossEntropyLoss(), **argv):
     ce_loss = nn.CrossEntropyLoss()
     optimizer = optim.Adam(student.parameters(), lr=learning_rate)
 
@@ -99,6 +99,7 @@ def train_knowledge_distillation(teacher, student, train_loader, epochs, learnin
         print(f"Begining epoch {epoch+1}:")
         running_loss = 0.0
         for i, data in enumerate(train_loader, 0):
+            print(f"\tBatch {i+1} / {len(train_loader)}", end="\r")
             # get the inputs; data is a list of [inputs, labels]
             inputs, labels = data[0].to(device), data[1].to(device)
 
@@ -162,7 +163,7 @@ def train_knowledge_distillation(teacher, student, train_loader, epochs, learnin
 
 with wandb.init(project=project, config=config2) as run:
     path = "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_scheduler_mixup_distillation_8bitD"
-    train_knowledge_distillation(teacher=teachermodel, student=studentmodel, train_loader=trainloader_DA, epochs=10, learning_rate=0.001, T=2, soft_target_loss_weight=0.25, ce_loss_weight=0.75, device=device,test_loader=test_dataloader)
+    train_knowledge_distillation(teacher=teachermodel, student=studentmodel, train_loader=trainloader_DA, T=2, soft_target_loss_weight=0.25, ce_loss_weight=0.75, device=device,test_loader=test_dataloader, **config2)
     
 studentmodel.eval()
 quant.convert(studentmodel, inplace=True)
