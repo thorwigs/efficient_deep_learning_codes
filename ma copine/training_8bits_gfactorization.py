@@ -158,7 +158,7 @@ def train(net, train_loader, test_loader, path, run, stats={}, epoch_start=0, op
     return stats
 
 with wandb.init(project=project, config=config2) as run:
-    path = "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_scheduler_mixup_quant_3"
+    path = "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_scheduler_mixup_quant_G"
     stats = train(net, trainloader_DA, test_dataloader, path, run, **config2)
 
 
