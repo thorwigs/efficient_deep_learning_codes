@@ -22,8 +22,8 @@ test_dataloader = test.load_cifar_test(test.load_test_transformation())
 
 device = torch.device("cpu")
 
-config2 = {"epochs": 300,
-          'learning_rate': 0.001,
+config2 = {"epochs": 20,
+          'learning_rate': 0.0001,
           "momentum": 0.9,
           "weight_decay": 5e-4, 
           "nb_blocks": [4,8,16,12],
