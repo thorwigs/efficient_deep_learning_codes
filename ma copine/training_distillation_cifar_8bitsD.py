@@ -11,19 +11,20 @@ from torch.utils.data.dataloader import DataLoader
 import torch.ao.quantization as quant
 import torch.optim as optim
 import sys
-sys.path.append("/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/")
+sys.path.insert(0, "/homes/c23bosca/Documents/efficient_deep_learning_codes/")
 import densenet
+sys.path.insert(0, "/homes/c23bosca/Documents/efficient_deep_learning_codes/ma copine/")
 import densenet_8bits_dfactorization
 import test
+print(test.__file__)
 from os.path import exists, dirname, basename
 
 
 test_dataloader = test.load_cifar_test(test.load_test_transformation())
+device = torch.device("cpu")
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
-config2 = {"epochs": 300,
-          'lr': 0.001,
+config2 = {"epochs": 20,
+          'learning_rate': 0.01,
           "momentum": 0.9,
           "weight_decay": 5e-4, 
           "nb_blocks": [4,8,16,12],
@@ -33,9 +34,7 @@ config2 = {"epochs": 300,
 
 # J'importe le teacher model
 teachermodel = densenet.densenet_cifar()
-teachermodel.qconfig = quant.get_default_qat_qconfig("fbgemm")
-quant.prepare_qat(teachermodel, inplace=True)
-loaded_cpt = torch.load('stats/DN_100_ADAM_scheduler_mixup_quant_1.pth')
+loaded_cpt = torch.load('/homes/c23bosca/Documents/efficient_deep_learning_codes/stats/DN_200_scheduler_mixup_1.pth')
 teachermodel.load_state_dict(loaded_cpt)
 
 
@@ -44,7 +43,7 @@ studentmodel = densenet_8bits_dfactorization.densenet_cifar_plus_petit(**config2
 studentmodel.qconfig = quant.get_default_qat_qconfig("fbgemm")
 torch.backends.quantized.engine = 'fbgemm'
 quant.prepare_qat(studentmodel, inplace=True)
-loaded_cpt2 = torch.load('stats/DN_100_scheduler_mixup_quant_3.pth')
+loaded_cpt2 = torch.load('/homes/c23bosca/Documents/efficient_deep_learning_codes/stats/DN_100_scheduler_mixup_quant_3.pth')
 studentmodel.load_state_dict(loaded_cpt2)
 
 # J'importe les modules wandb
@@ -80,9 +79,10 @@ trainloader_DA = DataLoader(c10train_DA,batch_size=64,shuffle=True, collate_fn=c
 
 
 
-def train_knowledge_distillation(teacher, student, train_loader, epochs, learning_rate, T, soft_target_loss_weight, ce_loss_weight, device,test_loader, criterion=nn.CrossEntropyLoss()):
+def train_knowledge_distillation(teacher, student, train_loader, epochs, learning_rate, T, soft_target_loss_weight, ce_loss_weight, device,test_loader, criterion=nn.CrossEntropyLoss(), **argv):
+
     ce_loss = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(student.parameters(), lr=learning_rate)
+    optimizer = optim.SGD(student.parameters(), lr=learning_rate, momentum=0.9, weight_decay=5e-4)
 
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
         optimizer,
@@ -117,18 +117,22 @@ def train_knowledge_distillation(teacher, student, train_loader, epochs, learnin
 
             # Calculate the soft targets loss. Scaled by T**2 as suggested by the authors of the paper "Distilling the knowledge in a neural network"
             soft_targets_loss = torch.sum(soft_targets * (soft_targets.log() - soft_prob)) / soft_prob.size()[0] * (T**2)
-
             # Calculate the true label loss
             label_loss = ce_loss(student_logits, labels)
-
             # Weighted sum of the two losses
             loss = soft_target_loss_weight * soft_targets_loss + ce_loss_weight * label_loss
+            #soft_targets_loss = nn.functional.kl_div(soft_prob, soft_targets, reduction='batchmean') * (T ** 2)
+
+
+            #label_loss = -torch.sum(labels * nn.functional.log_softmax(student_logits, dim=-1), dim=-1).mean()
+
+            #loss = soft_target_loss_weight * soft_targets_loss + ce_loss_weight * label_loss
 
             loss.backward()
             optimizer.step()
 
             running_loss += loss.item()
-
+        scheduler.step()
         total, corect, test_loss = test.test(student, test_loader, device, criterion)
     
         acc = (corect/total*100)
@@ -161,8 +165,9 @@ def train_knowledge_distillation(teacher, student, train_loader, epochs, learnin
     return stats
 
 with wandb.init(project=project, config=config2) as run:
-    path = "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_scheduler_mixup_distillation_cifar_8bitsD"
-    train_knowledge_distillation(teacher=teachermodel, student=studentmodel, train_loader=trainloader_DA, epochs=10, learning_rate=0.001, T=2, soft_target_loss_weight=0.25, ce_loss_weight=0.75, device=device,test_loader=test_dataloader)
+    path = "/homes/c23bosca/Documents/efficient_deep_learning_codes/stats/DN_100_scheduler_mixup_distillation_cifar_8bitsD"
+    train_knowledge_distillation(teacher=teachermodel, student=studentmodel, train_loader=trainloader_DA, T=2, soft_target_loss_weight=0.25, ce_loss_weight=0.75, device=device,test_loader=test_dataloader, **config2)
+
     
 studentmodel.eval()
 quant.convert(studentmodel, inplace=True)
