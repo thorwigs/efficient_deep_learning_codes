@@ -23,7 +23,6 @@ test_dataloader = test.load_cifar_test(test.load_test_transformation())
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-loaded_cpt = torch.load('/homes/c23bosca/Documents/efficient_deep_learning_codes/stats/DN_200_ADAM_scheduler_mixup_quant_1.pth')
 
 config2 = {"epochs": 300,
           'lr': 0.01,
@@ -37,7 +36,7 @@ model = densenet_8bits.densenet_cifar_plus_petit(**config2)
 model.qconfig = quant.get_default_qat_qconfig("fbgemm")
 torch.backends.quantized.engine = 'fbgemm'
 quant.prepare_qat(model, inplace=True)
-loaded_cpt2 = torch.load('/homes/c23bosca/Documents/efficient_deep_learning_codes/stats/DN_200_ADAM_scheduler_mixup_quant_1.pth')
+loaded_cpt2 = torch.load('/homes/c23bosca/Documents/efficient_deep_learning_codes/stats/DN_100_ADAM_scheduler_mixup_quant_1.pth')
 model.load_state_dict(loaded_cpt2)
 
 model.to(device)
@@ -67,7 +66,7 @@ trainloader = DataLoader(c10train,batch_size=64,shuffle=True)
 epochs = 10
 acc = 0
 nb_acc = 8
-amount = 0.9
+amount = 0.65
 lr = 0.01
 momentum = 0.9
 weight_decay = 5e-04
@@ -136,9 +135,6 @@ model.eval()
 print("Test network after fine tunning on cifar test :")
 test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
 
-path = "stats/DN_pruning_0_9"
+path = "/homes/c23bosca/Documents/efficient_deep_learning_codes/stats/DN_pruning_quantized_0_5"
 torch.save(model.state_dict(), path+".pth")
 
-print("Test network after half:")
-model.half()
-test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss(), half=True))
