@@ -2,7 +2,7 @@ import torch
 import torchinfo
 
 import sys
-sys.path.append("/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/")
+sys.path.append("/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine")
 
 from densenet import *
 
@@ -20,8 +20,8 @@ ps = 0
 pu = 0
 pu_vrai = (1-ps)*pu
 
-qw = 1
-qa = 16
+qw = 32
+qa = 32
 
 summ = torchinfo.summary(model, (1, 3, 32, 32), verbose=0)
 w = summ.total_params

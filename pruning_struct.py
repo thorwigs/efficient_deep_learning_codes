@@ -95,19 +95,24 @@ for name, m in model.named_modules():
         nb_bn = 0
         for idx, m2 in enumerate(m.modules()):
             if isinstance(m2, Bottleneck):
-                importance = torch.sum(torch.abs(m2.conv2.weight.data))/(m2.conv2.weight.data.shape[0]*m2.conv2.weight.data.shape[1]*m2.conv2.weight.data.shape[2]*m2.conv2.weight.data.shape[3])
-                liste_pruned.append((importance, nb_bn))
+                importance = torch.sum(torch.abs(m2.conv2.weight.data))
+                tot = m2.conv2.weight.data.shape[0]*m2.conv2.weight.data.shape[1]*m2.conv2.weight.data.shape[2]*m2.conv2.weight.data.shape[3]
+                liste_pruned.append([importance, tot, nb_bn])
+
+                for i in range(nb_bn):
+                    liste_pruned[i][0] += torch.sum(torch.abs(m2.conv1.weight.data[:, i*growth_rate:(i+1)*growth_rate, :, :]))
+                    liste_pruned[i][1] += m2.conv1.weight.data.shape[0]*growth_rate*m2.conv1.weight.data.shape[2]*m2.conv1.weight.data.shape[3]
                 nb_bn += 1
 
-        liste_pruned.sort(key=lambda x: x[0])
+        liste_pruned.sort(key=lambda x: x[0]/x[1])
 
         in_planes = in_seq
         new_layers = []
 
         keep_index = liste_pruned[:int((1-amount)*len(liste_pruned))]
-        keep_index.sort(key=lambda x: x[1])
+        keep_index.sort(key=lambda x: x[2])
 
-        for i, (_, idx) in enumerate(keep_index):
+        for i, (_, _, idx) in enumerate(keep_index):
 
             old_layer = m[idx]
             new_layer = Bottleneck(in_planes, growth_rate).to(device)
@@ -116,7 +121,7 @@ for name, m in model.named_modules():
 
             liste_index = list(range(idx*growth_rate, idx*growth_rate + in_seq))
 
-            keeping = list(set([(idx-i_keep-1)*growth_rate + j for _, i_keep in keep_index[:i] for j in range(growth_rate)] + liste_index))
+            keeping = list(set([(idx-i_keep-1)*growth_rate + j for (_, _, i_keep) in keep_index[:i] for j in range(growth_rate)] + liste_index))
 
             # print(liste_index, keeping, new_layer.bn1.weight.data.shape)
 
@@ -155,7 +160,7 @@ for name, m in model.named_modules():
             idx = nb_bn
 
             liste_index = list(range(idx*growth_rate, idx*growth_rate + in_seq))
-            keeping = list(set([(idx-i_keep-1)*growth_rate + j for _,i_keep in keep_index for j in range(growth_rate)] + liste_index))
+            keeping = list(set([(idx-i_keep-1)*growth_rate + j for (_, _, i_keep) in keep_index for j in range(growth_rate)] + liste_index))
 
             # print(keeping, idx, keep_index, trans.bn.weight.data.shape)
             new_trans.bn.weight.data.copy_(trans.bn.weight.data[keeping])
@@ -185,7 +190,7 @@ for name, m in model.named_modules():
 
             liste_index = list(range(idx*growth_rate, idx*growth_rate + in_seq))
 
-            keeping = list(set([(idx-i_keep-1)*growth_rate + j for _,i_keep in keep_index for j in range(growth_rate)] + liste_index))
+            keeping = list(set([(idx-i_keep-1)*growth_rate + j for (_, _, i_keep) in keep_index for j in range(growth_rate)] + liste_index))
 
             new_bn.weight.data.copy_(model.bn.weight.data[keeping])
             new_bn.bias.data.copy_(model.bn.bias.data[keeping])
@@ -249,7 +254,7 @@ for epoch in range(epochs):
 print("Test network after fine tunning on cifar test :")
 test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
 
-path = "stats/DN_pruning_struct_0_05"
+path = "stats/DN_pruning_struct_0_01_choiceV2"
 torch.save(model.state_dict(), path+".pth")
 
 print("Test network after half:")

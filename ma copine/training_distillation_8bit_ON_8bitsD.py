@@ -23,7 +23,7 @@ test_dataloader = test.load_cifar_test(test.load_test_transformation())
 device = torch.device("cpu")
 
 config2 = {"epochs": 20,
-          'learning_rate': 0.0001,
+          'learning_rate': 0.001,
           "momentum": 0.9,
           "weight_decay": 5e-4, 
           "nb_blocks": [4,8,16,12],
@@ -129,11 +129,13 @@ def train_knowledge_distillation(teacher, student, train_loader, epochs, learnin
             optimizer.step()
 
             running_loss += loss.item()
+        
+        scheduler.step()
 
         total, corect, test_loss = test.test(student, test_loader, device, criterion)
     
         acc = (corect/total*100)
-        print(f"End of epoch {epoch+1} : \n\tmean loss = {running_loss/(i+1):0.3f} \n\ttest loss = {test_loss:0.3f} \n\ttest accuracy = {acc:0.2f}%")
+        print(f"End of epoch {epoch+1} : \t\t\n\tmean loss = {running_loss/(i+1):0.3f} \n\ttest loss = {test_loss:0.3f} \n\ttest accuracy = {acc:0.2f}%")
 
         stats[f"epoch {epoch}"] = {"mean loss": running_loss/(i+1),
                         "test loss": test_loss,
@@ -162,7 +164,7 @@ def train_knowledge_distillation(teacher, student, train_loader, epochs, learnin
     return stats
 
 with wandb.init(project=project, config=config2) as run:
-    path = "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_scheduler_mixup_distillation_8bitD"
+    path = "/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_scheduler_mixup_distillation_8bitD_1"
     train_knowledge_distillation(teacher=teachermodel, student=studentmodel, train_loader=trainloader_DA, T=2, soft_target_loss_weight=0.25, ce_loss_weight=0.75, device=device,test_loader=test_dataloader, **config2)
     
 studentmodel.eval()
