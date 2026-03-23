@@ -11,7 +11,7 @@ from torch.utils.data.dataloader import DataLoader
 import torch.ao.quantization as quant
 import torch.optim as optim
 import sys
-sys.path.append("/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/")
+sys.path.append("/homes/c23bosca/Documents/efficient_deep_learning_codes/")
 import densenet_8bits
 import densenet_8bits_dfactorization
 import test
@@ -35,7 +35,7 @@ config2 = {"epochs": 20,
 teachermodel = densenet_8bits.densenet_cifar_plus_petit(**config2)
 teachermodel.qconfig = quant.get_default_qat_qconfig("fbgemm")
 quant.prepare_qat(teachermodel, inplace=True)
-loaded_cpt = torch.load('/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_ADAM_scheduler_mixup_quant_1.pth')
+loaded_cpt = torch.load('/homes/c23bosca/Documents/efficient_deep_learning_codes/stats/DN_100_ADAM_scheduler_mixup_quant_1.pth')
 teachermodel.load_state_dict(loaded_cpt)
 
 
@@ -44,7 +44,7 @@ studentmodel = densenet_8bits_dfactorization.densenet_cifar_plus_petit(**config2
 studentmodel.qconfig = quant.get_default_qat_qconfig("fbgemm")
 torch.backends.quantized.engine = 'fbgemm'
 quant.prepare_qat(studentmodel, inplace=True)
-loaded_cpt2 = torch.load('/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/stats/DN_100_scheduler_mixup_quant_3.pth')
+loaded_cpt2 = torch.load('/homes/c23bosca/Documents/efficient_deep_learning_codes/stats/DN_100_scheduler_mixup_quant_3.pth')
 studentmodel.load_state_dict(loaded_cpt2)
 
 # J'importe les modules wandb
@@ -129,9 +129,7 @@ def train_knowledge_distillation(teacher, student, train_loader, epochs, learnin
             optimizer.step()
 
             running_loss += loss.item()
-        
         scheduler.step()
-
         total, corect, test_loss = test.test(student, test_loader, device, criterion)
     
         acc = (corect/total*100)

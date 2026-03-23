@@ -1,6 +1,7 @@
 import torch
 import torchinfo
 from torch import nn
+import torch.ao.quantization as quant
 # import torch.nn.utils.prune as prune
 # import numpy
 import torchvision.transforms as transforms
@@ -14,8 +15,10 @@ import torch.optim as optim
 
 import sys
 sys.path.append("/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/")
+sys.path.append("/homes/y23charo/Documents/effeicient_deep_learning/codes_lab1/ma copine")
 
-from densenet import *
+import densenet
+import densenet_8bits
 import test
 
 
@@ -33,7 +36,16 @@ config2 = {"epochs": 300,
           "gr": 8,
           "red": 0.5}
 
-model = densenet_cifar_plus_petit(**config2)
+type_8 = True
+if type_8:
+    model = densenet_8bits.densenet_cifar_plus_petit(**config2)
+    
+    model.qconfig = quant.get_default_qat_qconfig("fbgemm")
+    torch.backends.quantized.engine = 'fbgemm'
+
+    quant.prepare_qat(model, inplace=True)
+else:
+    model = densenet.densenet_cifar_plus_petit(**config2)
 model.load_state_dict(loaded_cpt)
 model.eval()
 
