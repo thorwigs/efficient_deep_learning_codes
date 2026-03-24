@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt 
 
-with open("results_v2", "r") as file:
+with open("results_v3", "r") as file:
     lines = file.read().split("\n")
 
 def transform_line(line):
@@ -26,7 +26,7 @@ for line in lines:
 print(results)
 
 plt.figure(figsize=(10,8))
-colors = ["purple", "navy", "red"]
+colors = ["purple", "navy", "red", "green", "orange", "cyan", "magenta", "brown", "pink"]
 n = max(len(results), len(colors))
 for models, color in zip(results[:n], colors[:n]):
     for name, nb_param, percentage in models:
@@ -38,4 +38,4 @@ plt.grid()
 plt.title("scatter plot accuracy with respect to the score")
 plt.xlabel("score")
 plt.ylabel("accuracy (%)")
-plt.savefig("scatter_results_v2.png")
+plt.savefig("scatter_results_v3.png")

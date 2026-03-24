@@ -104,7 +104,7 @@ for name, m in model.named_modules():
                     liste_pruned[i][1] += m2.conv1.weight.data.shape[0]*growth_rate*m2.conv1.weight.data.shape[2]*m2.conv1.weight.data.shape[3]
                 nb_bn += 1
 
-        liste_pruned.sort(key=lambda x: x[0]/x[1])
+        liste_pruned.sort(key=lambda x: x[0]/x[1], reverse=True)
 
         in_planes = in_seq
         new_layers = []

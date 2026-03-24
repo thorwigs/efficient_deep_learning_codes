@@ -16,12 +16,12 @@ config2 = {"epochs": 300,
 
 model = densenet_cifar_plus_petit(**config2)
 
-ps = 0
+ps = 0.3
 pu = 0
 pu_vrai = (1-ps)*pu
 
-qw = 32
-qa = 32
+qw = 8
+qa = 8
 
 summ = torchinfo.summary(model, (1, 3, 32, 32), verbose=0)
 w = summ.total_params

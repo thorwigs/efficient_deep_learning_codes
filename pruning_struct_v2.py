@@ -1,8 +1,10 @@
+from ast import mod
+
 import torch
 import torchinfo
 from torch import nn
 import torch.ao.quantization as quant
-# import torch.nn.utils.prune as prune
+import torch.nn.utils.prune as prune
 # import numpy
 import torchvision.transforms as transforms
 from torchvision.transforms import v2
@@ -26,7 +28,7 @@ test_dataloader = test.load_cifar_test(test.load_test_transformation())
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-loaded_cpt = torch.load('stats/DN_300_scheduler_mixup_1.pth')
+loaded_cpt = torch.load('stats/DN_100_ADAM_scheduler_mixup_quant_1.pth')
 
 config2 = {"epochs": 300,
           'lr': 0.1,
@@ -39,9 +41,11 @@ config2 = {"epochs": 300,
 type_8 = True
 if type_8:
     model = densenet_8bits.densenet_cifar_plus_petit(**config2)
-    
-    model.qconfig = quant.get_default_qat_qconfig("fbgemm")
-    torch.backends.quantized.engine = 'fbgemm'
+
+    quant_engine = "fbgemm"
+
+    model.qconfig = quant.get_default_qat_qconfig(quant_engine)
+    torch.backends.quantized.engine = quant_engine
 
     quant.prepare_qat(model, inplace=True)
 else:
@@ -70,20 +74,18 @@ rootdir = '/opt/img/effdl-cifar10/'
 c10train = CIFAR10(rootdir,train=True,download=True,transform=transform_train)
 trainloader = DataLoader(c10train,batch_size=64,shuffle=True)
 
-epochs = 10
+epochs = 15
 acc = 0
 nb_acc = 8
-amount = 0.1
-lr = 0.001
+amount_s = 0.3
+amount_u = 0
+lr_in = 0.01
+lr_after = 0.001
 momentum = 0.9
-weight_decay = 5e-04
+weight_decay = 1e-04
 
-optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
+optimizer_in = optim.SGD(model.parameters(), lr=lr_in, momentum=momentum, weight_decay=weight_decay)
 criterion = nn.CrossEntropyLoss()
-scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-    optimizer,
-    T_max=epochs
-)
 
 print("Test whole network on cifar test :")
 test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
@@ -93,15 +95,20 @@ w_f = summ.total_params
 print(f"total params at first : {w_f}")
 
 model.train()
-print(f"training + pruning : {amount}")
+print(f"training + pruning : {amount_s} structured and {amount_u} unstructured")
 
 growth_rate = model.growth_rate
 reduction = config2["red"]
 in_seq = 2*growth_rate
 nb = 0
+
+prune.l1_unstructured(model.conv1, name='weight', amount=amount_u)
+
+model.conv1.qconfig = quant.get_default_qat_qconfig("fbgemm")
+
 for name, m in model.named_modules():
 
-    if isinstance(m, Bottleneck):
+    if isinstance(m, (densenet.Bottleneck, densenet_8bits.Bottleneck)):
         # print(f"Starting pruning {m} ({name}) with {len(m)} Bottlenecks")
         liste_pruned = []
         for i in range(m.conv1.weight.data.size()[0]):
@@ -110,12 +117,12 @@ for name, m in model.named_modules():
             tot += m.conv2.weight.data.shape[0]*m.conv2.weight.data.shape[2]*m.conv2.weight.data.shape[3]
             liste_pruned.append((importance/tot, i))
 
-        liste_pruned.sort(key=lambda x: x[0])
+        liste_pruned.sort(key=lambda x: x[0], reverse=True)
 
         in_planes = in_seq
         new_layers = []
 
-        nb_kept_layers = int((1-amount)*len(liste_pruned))
+        nb_kept_layers = int((1-amount_s)*len(liste_pruned))
 
         keep_index = liste_pruned[:nb_kept_layers]
         keep_index = [x[1] for x in keep_index]
@@ -141,6 +148,13 @@ for name, m in model.named_modules():
         m.bn2 = new_bn2
         m.conv2 = new_conv2
 
+        prune.l1_unstructured(m.conv1, name='weight', amount=amount_u)
+        prune.l1_unstructured(m.conv2, name='weight', amount=amount_u)
+
+        m.conv1.qconfig = quant.get_default_qat_qconfig(quant_engine)
+        m.bn2.qconfig   = quant.get_default_qat_qconfig(quant_engine)
+        m.conv2.qconfig = quant.get_default_qat_qconfig(quant_engine)
+
 
         model.to(device)
 
@@ -153,21 +167,45 @@ for name, m in model.named_modules():
                 inputs, labels = data[0].to(device), data[1].to(device)
 
                 # zero the parameter gradients
-                optimizer.zero_grad()
+                optimizer_in.zero_grad()
 
                 # forward + backward + optimize
                 outputs = model(inputs)
 
                 loss = criterion(outputs, labels)
                 loss.backward()
-                optimizer.step()
+                optimizer_in.step()
 
 
-summ = torchinfo.summary(model, (1, 3, 32, 32), verbose=0)
-w_e = summ.total_params
-print(f"total params at the end : {w_e}")
-print(f"pruning rate : {(1-w_e/w_f)*100:0.2f}%")
+    elif isinstance(m, (densenet.Transition, densenet_8bits.Transition)):
+        prune.l1_unstructured(m.conv, name='weight', amount=amount_u)
+        m.conv.qconfig = quant.get_default_qat_qconfig(quant_engine)
+    elif isinstance(m, (nn.Linear)):
+        prune.l1_unstructured(m, name='weight', amount=amount_u)
+        m.qconfig = quant.get_default_qat_qconfig(quant_engine)
 
+
+masks = {}
+for name, module in model.named_modules():
+    if isinstance(module, nn.Conv2d) and hasattr(module, 'weight') and prune.is_pruned(module):
+        masks[name] = module.weight_mask.clone()
+        prune.remove(module, 'weight')
+        module.weight = nn.Parameter(module.weight.data)    
+
+
+model.qconfig = quant.get_default_qat_qconfig(quant_engine)
+quant.prepare_qat(model, inplace=True)
+
+for name, module in model.named_modules():
+    if isinstance(module, nn.Conv2d) and name in masks:
+        prune.custom_from_mask(module, name='weight', mask=masks[name])
+
+
+optimizer_after = optim.SGD(model.parameters(), lr=lr_after, momentum=momentum, weight_decay=weight_decay)
+scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
+    optimizer_after,
+    T_max=epochs
+)
 
 for epoch in range(epochs):
     print(f"Epoch {epoch+1}")
@@ -176,26 +214,50 @@ for epoch in range(epochs):
         inputs, labels = data[0].to(device), data[1].to(device)
 
         # zero the parameter gradients
-        optimizer.zero_grad()
+        optimizer_after.zero_grad()
 
         # forward + backward + optimize
         outputs = model(inputs)
 
         loss = criterion(outputs, labels)
         loss.backward()
-        optimizer.step()
+        optimizer_after.step()
 
     scheduler.step()
     test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
 
+for module in model.modules():
+    if isinstance(module, (nn.Conv2d, nn.Linear)) and hasattr(module, 'weight') and prune.is_pruned(module):
+        prune.remove(module, 'weight')
+
+summ = torchinfo.summary(model, (1, 3, 32, 32), verbose=0)
+w_e = summ.total_params
+print(f"total params at the end : {w_e}")
+print(f"pruning rate : {(1-w_e/w_f)*100:0.2f}%")
+
 
 model.eval()
+if type_8:
+    device = torch.device("cpu")
+    model.to(device)
+
+    for name, module in model.named_modules():
+        if isinstance(module, torch.ao.nn.qat.modules.linear.Linear):
+            module.weight = nn.Parameter(module.weight.data.cpu())
+            if module.bias is not None:
+                module.bias = nn.Parameter(module.bias.data.cpu())
+
+
+    quant.convert(model, inplace=True)
+
 print("Test network after fine tunning on cifar test :")
 test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss()))
 
-path = "stats/DN_pruning_struct_0_5_filterV2"
+path = "stats/DN_pruning_struct_quant_0_3_filterV2"
+print(f"Saving model at {path}.pth")
 torch.save(model.state_dict(), path+".pth")
 
-print("Test network after half:")
-model.half()
-test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss(), half=True))
+if not type_8:
+    print("Test network after half:")
+    model.half()
+    test.read(*test.test(model, test_dataloader, device, nn.CrossEntropyLoss(), half=True))

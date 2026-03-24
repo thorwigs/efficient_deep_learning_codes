@@ -1,0 +1,9 @@
+16bit_50%_struct_pruning ; 0.039 ; 90.3%
+
+32bit_factorization ; 0.099 ; 89.96%
+8bit_factorization ; 0.025 ; 88.78%
+
+8bit_65%_unstruct ; 0.03185 ; 90.3%
+8bit_50%_unstruct_20%_struct ; 0.027 ; 89.96%
+
+8bit_on_reduced_adam ; 0.039 ; 90.62%
